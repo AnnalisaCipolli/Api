@@ -23,9 +23,8 @@ namespace Userbox.Controllers
         [Authorize]
         public IActionResult Index()
         {
-
            
-         JsonAnagraficaIDM i=    wsc.GetAnagraficaIDMByCF(_utenteauth.CodFiscale);
+         JsonAnagraficaIDM i=    wsc.GetAnagraficaIDMByCF(_utenteauth.CodFiscale);  
 
             return View();
         }
