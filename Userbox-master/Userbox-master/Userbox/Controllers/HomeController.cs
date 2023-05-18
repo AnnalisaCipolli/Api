@@ -11,20 +11,19 @@ namespace Userbox.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly UtenteAuth _utenteauth;
         private readonly ConfigurationManager _config;
-        private WebServiceCall wsc;
-
-        public HomeController(ILogger<HomeController> logger,  UtenteAuth utenteauth, ConfigurationManager config,)
+      
+        public HomeController(ILogger<HomeController> logger,  UtenteAuth utenteauth, ConfigurationManager config)
         {
             _logger = logger;
             _utenteauth = utenteauth;
            _config= config;
-            wsc = new WebServiceCall(_config);
+          
         }
         [Authorize]
         public IActionResult Index()
         {
-           
-         JsonAnagraficaIDM i=    wsc.GetAnagraficaIDMByCF(_utenteauth.CodFiscale);  
+          WebServiceCall  wsc = new WebServiceCall(_config);
+            JsonAnagraficaIDM i=    wsc.GetAnagraficaIDMByCF(_utenteauth.CodFiscale);  
 
             return View();
         }
