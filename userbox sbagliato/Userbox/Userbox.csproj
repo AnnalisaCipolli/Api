@@ -1,0 +1,192 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.4" NoWarn="NU1605" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.4" NoWarn="NU1605" />
+		<PackageReference Include="Microsoft.Identity.Web" Version="1.24.0" />
+		<PackageReference Include="Microsoft.Identity.Web.UI" Version="1.24.0" />
+		<PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.4" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.4" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.4" />
+		<PackageReference Include="Microsoft.DotNet.PlatformAbstractions" Version="3.1.6" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.4">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.4">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.3" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+		<PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.18" />
+		<PackageReference Include="ZXing.Net" Version="0.16.8" />
+		<PackageReference Include="DocumentFormat.OpenXml" Version="2.16.0" />
+		<PackageReference Include="iText7" Version="7.2.2" />
+		<PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Update="Resources\Resource.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resource.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Resources\Resource.resx">
+			<Generator>PublicResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resource.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Assets\lib\Chart.js\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="wwwroot\fonts\font-awesome\js\all.js" />
+	  <None Include="wwwroot\fonts\font-awesome\js\all.min.js" />
+	  <None Include="wwwroot\fonts\font-awesome\js\brands.js" />
+	  <None Include="wwwroot\fonts\font-awesome\js\brands.min.js" />
+	  <None Include="wwwroot\fonts\font-awesome\js\conflict-detection.js" />
+	  <None Include="wwwroot\fonts\font-awesome\js\conflict-detection.min.js" />
+	  <None Include="wwwroot\fonts\font-awesome\js\fontawesome.js" />
+	  <None Include="wwwroot\fonts\font-awesome\js\fontawesome.min.js" />
+	  <None Include="wwwroot\fonts\font-awesome\js\regular.js" />
+	  <None Include="wwwroot\fonts\font-awesome\js\regular.min.js" />
+	  <None Include="wwwroot\fonts\font-awesome\js\solid.js" />
+	  <None Include="wwwroot\fonts\font-awesome\js\solid.min.js" />
+	  <None Include="wwwroot\fonts\font-awesome\js\v4-shims.js" />
+	  <None Include="wwwroot\fonts\font-awesome\js\v4-shims.min.js" />
+	  <None Include="wwwroot\fonts\font-awesome\sprites\brands.svg" />
+	  <None Include="wwwroot\fonts\font-awesome\sprites\regular.svg" />
+	  <None Include="wwwroot\fonts\font-awesome\sprites\solid.svg" />
+	  <None Include="wwwroot\fonts\font-awesome\webfonts\fa-brands-400.woff2" />
+	  <None Include="wwwroot\fonts\font-awesome\webfonts\fa-regular-400.woff2" />
+	  <None Include="wwwroot\fonts\font-awesome\webfonts\fa-solid-900.woff2" />
+	  <None Include="wwwroot\fonts\font-awesome\webfonts\fa-v4compatibility.woff2" />
+	  <None Include="wwwroot\img\cherubino-white.svg" />
+	  <None Include="wwwroot\js\adminlte.min.js" />
+	  <None Include="wwwroot\js\bootstrap.min.js" />
+	  <None Include="wwwroot\js\datatables.min.js" />
+	  <None Include="wwwroot\js\datatablesButtons.min.js" />
+	  <None Include="wwwroot\js\font-awesome.min.js" />
+	  <None Include="wwwroot\js\home-index.min.js" />
+	  <None Include="wwwroot\js\icons\default\icons.min.js" />
+	  <None Include="wwwroot\js\jquery-ui.min.js" />
+	  <None Include="wwwroot\js\jquery.inputmask.min.js" />
+	  <None Include="wwwroot\js\jquery.min.js" />
+	  <None Include="wwwroot\js\jquery.tinymce.min.js" />
+	  <None Include="wwwroot\js\jquery.validation.min.js" />
+	  <None Include="wwwroot\js\moment.min.js" />
+	  <None Include="wwwroot\js\MyTinymce.min.js" />
+	  <None Include="wwwroot\js\plugins\advlist\plugin.js" />
+	  <None Include="wwwroot\js\plugins\advlist\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\anchor\plugin.js" />
+	  <None Include="wwwroot\js\plugins\anchor\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\autolink\plugin.js" />
+	  <None Include="wwwroot\js\plugins\autolink\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\autoresize\plugin.js" />
+	  <None Include="wwwroot\js\plugins\autoresize\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\autosave\plugin.js" />
+	  <None Include="wwwroot\js\plugins\autosave\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\bbcode\plugin.js" />
+	  <None Include="wwwroot\js\plugins\bbcode\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\charmap\plugin.js" />
+	  <None Include="wwwroot\js\plugins\charmap\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\codesample\plugin.js" />
+	  <None Include="wwwroot\js\plugins\codesample\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\code\plugin.js" />
+	  <None Include="wwwroot\js\plugins\code\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\colorpicker\plugin.js" />
+	  <None Include="wwwroot\js\plugins\colorpicker\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\contextmenu\plugin.js" />
+	  <None Include="wwwroot\js\plugins\contextmenu\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\directionality\plugin.js" />
+	  <None Include="wwwroot\js\plugins\directionality\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\emoticons\js\emojiimages.min.js" />
+	  <None Include="wwwroot\js\plugins\emoticons\js\emojis.min.js" />
+	  <None Include="wwwroot\js\plugins\emoticons\plugin.js" />
+	  <None Include="wwwroot\js\plugins\emoticons\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\fullpage\plugin.js" />
+	  <None Include="wwwroot\js\plugins\fullpage\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\fullscreen\plugin.js" />
+	  <None Include="wwwroot\js\plugins\fullscreen\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\help\plugin.js" />
+	  <None Include="wwwroot\js\plugins\help\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\hr\plugin.js" />
+	  <None Include="wwwroot\js\plugins\hr\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\imagetools\plugin.js" />
+	  <None Include="wwwroot\js\plugins\imagetools\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\image\plugin.js" />
+	  <None Include="wwwroot\js\plugins\image\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\importcss\plugin.js" />
+	  <None Include="wwwroot\js\plugins\importcss\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\insertdatetime\plugin.js" />
+	  <None Include="wwwroot\js\plugins\insertdatetime\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\legacyoutput\plugin.js" />
+	  <None Include="wwwroot\js\plugins\legacyoutput\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\link\plugin.js" />
+	  <None Include="wwwroot\js\plugins\link\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\lists\plugin.js" />
+	  <None Include="wwwroot\js\plugins\lists\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\media\plugin.js" />
+	  <None Include="wwwroot\js\plugins\media\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\nonbreaking\plugin.js" />
+	  <None Include="wwwroot\js\plugins\nonbreaking\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\noneditable\plugin.js" />
+	  <None Include="wwwroot\js\plugins\noneditable\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\pagebreak\plugin.js" />
+	  <None Include="wwwroot\js\plugins\pagebreak\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\paste\plugin.js" />
+	  <None Include="wwwroot\js\plugins\paste\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\preview\plugin.js" />
+	  <None Include="wwwroot\js\plugins\preview\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\print\plugin.js" />
+	  <None Include="wwwroot\js\plugins\print\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\quickbars\plugin.js" />
+	  <None Include="wwwroot\js\plugins\quickbars\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\save\plugin.js" />
+	  <None Include="wwwroot\js\plugins\save\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\searchreplace\plugin.js" />
+	  <None Include="wwwroot\js\plugins\searchreplace\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\spellchecker\plugin.js" />
+	  <None Include="wwwroot\js\plugins\spellchecker\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\tabfocus\plugin.js" />
+	  <None Include="wwwroot\js\plugins\tabfocus\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\table\plugin.js" />
+	  <None Include="wwwroot\js\plugins\table\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\template\plugin.js" />
+	  <None Include="wwwroot\js\plugins\template\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\textcolor\plugin.js" />
+	  <None Include="wwwroot\js\plugins\textcolor\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\textpattern\plugin.js" />
+	  <None Include="wwwroot\js\plugins\textpattern\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\toc\plugin.js" />
+	  <None Include="wwwroot\js\plugins\toc\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\visualblocks\plugin.js" />
+	  <None Include="wwwroot\js\plugins\visualblocks\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\visualchars\plugin.js" />
+	  <None Include="wwwroot\js\plugins\visualchars\plugin.min.js" />
+	  <None Include="wwwroot\js\plugins\wordcount\plugin.js" />
+	  <None Include="wwwroot\js\plugins\wordcount\plugin.min.js" />
+	  <None Include="wwwroot\js\select2.min.js" />
+	  <None Include="wwwroot\js\site.min.js" />
+	  <None Include="wwwroot\js\themes\mobile\theme.min.js" />
+	  <None Include="wwwroot\js\themes\silver\theme.min.js" />
+	  <None Include="wwwroot\js\tinymce.min.js" />
+	</ItemGroup>
+</Project>
