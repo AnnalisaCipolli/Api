@@ -1,0 +1,79 @@
+/**
+ * File skip-link-focus-fix.js.
+ *
+ * Helps with accessibility for keyboard only users.
+ *
+ * Learn more: https://git.io/vWdr2
+ */
+( function() {
+  var isIe = /(trident|msie)/i.test( navigator.userAgent );
+
+  if ( isIe && document.getElementById && window.addEventListener ) {
+    window.addEventListener( 'hashchange', function() {
+      var id = location.hash.substring( 1 ),
+        element;
+
+      if ( ! ( /^[A-z0-9_-]+$/.test( id ) ) ) {
+        return;
+      }
+
+      element = document.getElementById( id );
+
+      if ( element ) {
+        if ( ! ( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
+          element.tabIndex = -1;
+        }
+
+        element.focus();
+      }
+    }, false );
+  }
+} )();
+
+(function ( $ ) {
+  'use strict';
+
+  $( function () {
+    
+    /* Navbar fissa */
+    var navbar = $( '.navbar-main' );
+    var navbarprev = navbar.prev();
+    var navbarheight = navbar.height();
+    var sticky = navbar.offset().top;
+    var updateNavbar = function() {
+      if (window.pageYOffset >= sticky) {
+        navbar.addClass('fixed-top');
+        navbarprev.css('margin-bottom', navbarheight);
+      } else {
+        navbarprev.css('margin-bottom', 0);
+        navbar.removeClass('fixed-top');
+      }
+    };
+    $(window).on('scroll', updateNavbar);
+    $(window).on('resize', function() {
+      sticky = navbar.offset().top;
+      navbarheight = navbar.height();
+    });
+
+    /* Back to top */
+    var totop = $('#totop');
+    if(totop.length > 0) {
+      totop.on('click', function(e) {
+        e.preventDefault();
+        $("html, body").stop().animate({
+            scrollTop: 0
+        }, 500);
+      });
+      $(window).scroll(function() {
+        var t = $(window).scrollTop();
+        if(t >= 200) {
+          totop.fadeIn();
+        } else {
+          totop.fadeOut();
+        }
+      });
+    }
+
+  } );
+
+})( jQuery );

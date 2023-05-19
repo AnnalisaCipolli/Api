@@ -1,8 +1,85 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model Userbox.Models.APIAnagraficaCarriera
+
+@{
+    ViewData["Title"] = "Index";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div>
+    <h4>Anagrafica</h4>
+    <hr />
+
+    <div class="col-md-4">
+    <dl class="row">
+       
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cognome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cognome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cod_fiscale)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cod_fiscale)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nazione_nascita)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nazione_nascita)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nazione_nascita_nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nazione_nascita_nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Comune_nascita)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Comune_nascita)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Comune_nascita_nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Comune_nascita_nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Data_nascita)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Data_nascita)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataFineValiditaUtente)
+        </dt>
+        <dd class = "col-sm-10">
+              @{ 
+                            if (Model.DataFineValiditaUtente.HasValue)
+                            {
+                                    @Html.DisplayFor(model => model.DataFineValiditaUtente)
+                                }
+                                else
+                                {
+                                <p style="display:inline">N.D.</p>
+                                }
+                            }
+
+
+             
+        </dd>
+
+       
+    </dl>
+    </div>
 </div>
+

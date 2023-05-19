@@ -17,17 +17,16 @@ namespace Userbox.Models
         
         
 
-        public  JsonAnagraficaIDM GetAnagraficaIDMByCF(string cod_fiscale)
+        public APIAnagraficaCarriera GetAnagraficaIDMByCF(string cod_fiscale)
         {
             string ris = "";
-            string msg = "";
-            JsonAnagraficaIDM r = new JsonAnagraficaIDM();
+            APIAnagraficaCarriera r = new APIAnagraficaCarriera();
 
             ris = WebServiceConnector.getRequester(_config["WebService:url_ws02_API_IDM"], _config["WebService:token_ws02_API_IDM"], _config["WebService:method_ws02_API_IDM_Anagrafica_cf"] + cod_fiscale,null);
 
             if (ris != "")
             {
-                r = JsonConvert.DeserializeObject<JsonAnagraficaIDM>(ris);
+                r = JsonConvert.DeserializeObject<APIAnagraficaCarriera>(ris);
              }
 
             return r;

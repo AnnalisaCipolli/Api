@@ -23,6 +23,7 @@ ConfigurationManager configuration = builder.Configuration;
 ConfigurationManager StaticConfig = configuration;
 IWebHostEnvironment env = builder.Environment;
 builder.Services.AddSingleton(utenteauth);
+builder.Services.AddSingleton(config);
 
 
 
@@ -193,7 +194,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=Login}/{id?}");
 
 app.Run();
 #endregion

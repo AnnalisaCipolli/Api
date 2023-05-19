@@ -23,8 +23,15 @@ namespace Userbox.Controllers
         public IActionResult Index()
         {
           WebServiceCall  wsc = new WebServiceCall(_config);
-            JsonAnagraficaIDM i=    wsc.GetAnagraficaIDMByCF(_utenteauth.CodFiscale);  
+            APIAnagraficaCarriera ac=    wsc.GetAnagraficaIDMByCF(_utenteauth.CodFiscale);  
 
+            return View(ac);
+        }
+
+        [AllowAnonymous]
+        public IActionResult Test()
+        {
+           
             return View();
         }
 

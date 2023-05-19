@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Userbox", "Userbox\Userbox.csproj", "{88B34A33-02E1-4FB9-B6D3-A79E70E3C55D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LandingPage", "LandingPage", "{6C2E5A09-E226-429D-B9B0-09263133CEDB}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index.html = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Index_files", "Index_files", "{B2F1994D-F983-4EB5-AB58-C04CE262147C}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\all.css = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\all.css
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\app.js.download = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\app.js.download
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\bootstrap.css = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\bootstrap.css
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\bootstrap.js.download = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\bootstrap.js.download
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\cherubino-white.svg = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\cherubino-white.svg
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\css.css = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\css.css
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\custom.js.download = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\custom.js.download
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\front-flex.css = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\front-flex.css
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\if-menu-site.css = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\if-menu-site.css
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\jetpack-carousel.js.download = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\jetpack-carousel.js.download
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\jetpack.css = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\jetpack.css
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\jquery.css = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\jquery.css
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\jquery.js.download = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\jquery.js.download
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\jquery_002.js.download = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\jquery_002.js.download
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\jquery_003.js.download = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\jquery_003.js.download
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\jquery_004.js.download = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\jquery_004.js.download
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\pen.jpg = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\pen.jpg
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\ruxitagentjs_ICA2NVfjqru_10263230321103025.js.download = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\ruxitagentjs_ICA2NVfjqru_10263230321103025.js.download
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\script.js.download = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\script.js.download
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\skins.css = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\skins.css
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\style.css = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\style.css
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\styles.css = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\styles.css
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\style_002.css = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\style_002.css
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\style_003.css = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\style_003.css
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\tablet.jpg = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\tablet.jpg
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\theme.css = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\theme.css
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\theme.js.download = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\theme.js.download
+		..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\wp-embed.js.download = ..\..\..\..\Visual Studio 2019\Projects\AuthTrix-master\LandingPage\Index_files\wp-embed.js.download
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88B34A33-02E1-4FB9-B6D3-A79E70E3C55D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B34A33-02E1-4FB9-B6D3-A79E70E3C55D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B34A33-02E1-4FB9-B6D3-A79E70E3C55D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B34A33-02E1-4FB9-B6D3-A79E70E3C55D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B2F1994D-F983-4EB5-AB58-C04CE262147C} = {6C2E5A09-E226-429D-B9B0-09263133CEDB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C7FEBE2-6C19-4DFE-8F5A-102F0A495B43}
+	EndGlobalSection
+EndGlobal
