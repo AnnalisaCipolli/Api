@@ -8,11 +8,16 @@
     <h4>Anagrafica</h4>
     <hr />
 
+    <div class="box box-body">
+    <div class="form-horizontal">
     <div class="col-md-4">
-    <dl class="row">
-       
-        <dt class = "col-sm-2">
+
+        @if (Model!=null){
+            <dl>
+            
+            <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Nome)
+           
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Nome)
@@ -78,8 +83,54 @@
              
         </dd>
 
+          @if (Model.Ospite != null)
+                    {
+                                <div style="border:1px solid #eee">
+                                    <dt><u style="font-size:18px;color: #043659;">Ospite</u></dt>
+                                    <dd></dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.Ospite.Mail)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Ospite.Mail)
+                                    </dd>
+
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.Ospite.Data_aggiornamento)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Ospite.Data_aggiornamento)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.Ospite.Data_inizio)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Ospite.Data_inizio)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.Ospite.Data_fine)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Ospite.Data_fine)
+                                    </dd>
+                                    
+                                 
+                                </div>
+
+
+                    }
        
     </dl>
+    }
     </div>
 </div>
 
+</div>
+</div>
