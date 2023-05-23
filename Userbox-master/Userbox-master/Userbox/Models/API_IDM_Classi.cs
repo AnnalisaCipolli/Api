@@ -79,7 +79,7 @@ namespace Userbox.Models
         public string Area_ssd { get; set; }
         [Display(Name = "Area SSD ")] 
         public string Ds_area_ssd { get; set; }
-        [Display(Name = "Data inizio")]
+        [Display(Name = "Data assunzione")]
         [DisplayFormat(DataFormatString = "{0:d}")] 
         public DateTime? Data_inizio { get; set; }
         [Display(Name = "Data aggiornamento")]
@@ -93,9 +93,9 @@ namespace Userbox.Models
 
     public class APIAfferenze {
         [Display(Name = "Codice Afferenza")] 
-        public string cod_afferenza { get; set; }
+        public string Cod_afferenza { get; set; }
         [Display(Name = "Descrizione Afferenza")] 
-        public string descr_afferenza { get; set; }
+        public string Descr_afferenza { get; set; }
     }
 
     public class APIOspite

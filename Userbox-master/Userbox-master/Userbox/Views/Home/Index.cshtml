@@ -5,132 +5,367 @@
 }
 
 <div>
-    <h4>Anagrafica</h4>
+    <h4>Home</h4>
     <hr />
 
     <div class="box box-body">
     <div class="form-horizontal">
-    <div class="col-md-4">
-
-        @if (Model!=null){
-            <dl>
+    @if (Model!=null){
+        <div class="col-md-4">
+            <dl class="row" style="border:1px solid #eee">
+                <dt class = "col-sm-12"><u style="font-size:18px;color: #043659;">Anagrafica</u></dt>
+                <dt class = "col-sm-4">@Html.DisplayNameFor(model => model.Nome) </dt>
             
-            <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nome)
+                <dd class = "col-sm-8">
+                @Html.DisplayFor(model => model.Nome)
+                </dd>
+                <dt class = "col-sm-4">
+                    @Html.DisplayNameFor(model => model.Cognome)
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.Cognome)
+                </dd>
+                <dt class = "col-sm-4">
+                    @Html.DisplayNameFor(model => model.Cod_fiscale)
+                </dt>   
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.Cod_fiscale)
+                </dd>
+          
+                <dt class = "col-sm-4">
+                    @Html.DisplayNameFor(model => model.Nazione_nascita_nome)
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.Nazione_nascita_nome)
+                </dd>
            
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cognome)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cognome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cod_fiscale)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cod_fiscale)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nazione_nascita)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nazione_nascita)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nazione_nascita_nome)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nazione_nascita_nome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Comune_nascita)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Comune_nascita)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Comune_nascita_nome)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Comune_nascita_nome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Data_nascita)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Data_nascita)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DataFineValiditaUtente)
-        </dt>
-        <dd class = "col-sm-10">
-              @{ 
-                            if (Model.DataFineValiditaUtente.HasValue)
-                            {
-                                    @Html.DisplayFor(model => model.DataFineValiditaUtente)
-                                }
-                                else
+                <dt class = "col-sm-4">
+                    @Html.DisplayNameFor(model => model.Comune_nascita_nome)
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.Comune_nascita_nome)
+                </dd>
+                <dt class = "col-sm-4">
+                    @Html.DisplayNameFor(model => model.Data_nascita)
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.Data_nascita)
+                </dd>
+                <dt class = "col-sm-4">
+                    @Html.DisplayNameFor(model => model.DataFineValiditaUtente)
+                </dt>
+                <dd class = "col-sm-8">
+                  @{ 
+                                if (Model.DataFineValiditaUtente.HasValue)
                                 {
-                                <p style="display:inline">N.D.</p>
+                                        @Html.DisplayFor(model => model.DataFineValiditaUtente)
+                                    }
+                                    else
+                                    {
+                                    <p style="display:inline">N.D.</p>
                                 }
                             }
 
 
-             
-        </dd>
 
-          @if (Model.Ospite != null)
+                        </dd>
+                    </dl>
+
+
+                    @if (Model.Ospite != null)
                     {
-                                <div style="border:1px solid #eee">
-                                    <dt><u style="font-size:18px;color: #043659;">Ospite</u></dt>
-                                    <dd></dd>
+                        <dl class="row" style="border:1px solid #eee">                       
+                            <dt class = "col-sm-12"><u style="font-size:18px;color: #043659;">Ospite</u></dt>
+                <dt class = "col-sm-4">
+                    @Html.DisplayNameFor(model => model.Ospite.Mail)
+                </dt>
 
-                                    <dt>
-                                        @Html.DisplayNameFor(model => model.Ospite.Mail)
-                                    </dt>
-
-                                    <dd>
-                                        @Html.DisplayFor(model => model.Ospite.Mail)
-                                    </dd>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.Ospite.Mail)
+                </dd>
 
 
-                                    <dt>
-                                        @Html.DisplayNameFor(model => model.Ospite.Data_aggiornamento)
-                                    </dt>
+                <dt class = "col-sm-4">
+                    @Html.DisplayNameFor(model => model.Ospite.Data_aggiornamento)
+                </dt>
 
-                                    <dd>
-                                        @Html.DisplayFor(model => model.Ospite.Data_aggiornamento)
-                                    </dd>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.Ospite.Data_aggiornamento)
+                </dd>
 
-                                    <dt>
-                                        @Html.DisplayNameFor(model => model.Ospite.Data_inizio)
-                                    </dt>
+                <dt class = "col-sm-4">
+                    @Html.DisplayNameFor(model => model.Ospite.Data_inizio)
+                </dt>
 
-                                    <dd>
-                                        @Html.DisplayFor(model => model.Ospite.Data_inizio)
-                                    </dd>
-                                    <dt>
-                                        @Html.DisplayNameFor(model => model.Ospite.Data_fine)
-                                    </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.Ospite.Data_inizio)
+                </dd>
+                <dt class = "col-sm-4">
+                    @Html.DisplayNameFor(model => model.Ospite.Data_fine)
+                </dt>
 
-                                    <dd>
-                                        @Html.DisplayFor(model => model.Ospite.Data_fine)
-                                    </dd>
-                                    
-                                 
-                                </div>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.Ospite.Data_fine)
+                </dd>
+                                  
+        </dl>
+        }
+        </div>
+
+       @*Personale*@
+        @if (Model.Personale != null)
+                        {
+           <div class="col-md-4">
+            <dl class="row" style="border:1px solid #eee">                       
+                <dt class = "col-sm-12"><u style="font-size:18px;color: #043659;">Personale</u></dt>
+                <dt class = "col-sm-4">
+                    @Html.DisplayNameFor(model => model.Personale.Matricola)
+                </dt>
+
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.Personale.Matricola)
+                </dd>
+
+                <dt class = "col-sm-4">
+                @Html.DisplayNameFor(model => model.Personale.Mail)
+            </dt>
+
+            <dd class = "col-sm-8">
+                @Html.DisplayFor(model => model.Personale.Mail)
+            </dd>
 
 
-                    }
+            <dt class = "col-sm-4">
+                @Html.DisplayNameFor(model => model.Personale.Mail_esterna)
+            </dt>
+
+            <dd class = "col-sm-8">
+                @Html.DisplayFor(model => model.Personale.Mail_esterna)
+            </dd>
+
+             @if (Model.Personale.RuoliPersonale != null)
+        {
+            <hr />
+            if (Model.Personale.RuoliPersonale.Count > 1)
+            {
+                <dt><u>Ruoli</u></dt>
+                <dd></dd>
+            }
+            
+            foreach (Userbox.Models.APIRuoliPersonale r in Model.Personale.RuoliPersonale)
+                                            {
+
+                                                <dt class = "col-sm-4"></dt>
+                                                <dd class = "col-sm-8">----------------</dd>
+
+
+                                                <dt class = "col-sm-4">Ruolo</dt>
+                                                <dd class = "col-sm-8">@r.RuoloDescr</dd>
+                                                
+                                                <dt class = "col-sm-4">SSD</dt>
+                                                if (r.Cd_ssd != null && r.Cd_ssd != "000000000000" && r.Cd_ssd != "")
+                                                {
+                                                    <dd class = "col-sm-8">@r.Ds_ssd - @r.Ds_ssd_breve  [ Cod. @r.Cd_ssd ]</dd>
+                                                }
+                                                else
+                                                {
+                                                    <dd class = "col-sm-8">N.D.</dd>
+                                                }
+
+                                                <dt class = "col-sm-4">Area SSD</dt>
+                                                if (r.Area_ssd != null && r.Area_ssd != "00" && r.Area_ssd != "")
+                                                {
+                                                    <dd class = "col-sm-8">@r.Ds_area_ssd  [ Cod. @r.Area_ssd ]</dd>
+                                                }
+                                                else
+                                                {
+                                                    <dd class = "col-sm-8">N.D.</dd>
+                                                }
+
+                                                
+                                        <dt  class = "col-sm-4">
+                                            @Html.DisplayNameFor(model => model.Personale.Data_inizio)
+                                        </dt>
+
+                                        <dd  class = "col-sm-8">
+                                            @Html.DisplayFor(model => model.Personale.Data_inizio)
+                                        </dd>
+
+                                              @*  afferenze*@
+
+                                                <dt class = "col-sm-4">
+                                                    Afferenza Organizzativa
+                                                </dt>
+
+                                                <dd class = "col-sm-8">
+                                                    @if (r.Afferenze != null)
+                                                    {
+
+                                                        if (r.Afferenze.Count == 1)
+                                                        {
+                                                            if (r.Afferenze[0].Descr_afferenza != "")
+                                                            {
+                                                                <p style="margin:1px; font-size:12px"> @r.Afferenze[0].Descr_afferenza [Cod. @r.Afferenze[0].Cod_afferenza]</p>
+
+                                                            }
+                                                            else
+                                                            {
+                                                                <p> N.D.</p>
+
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            foreach (Userbox.Models.APIAfferenze af in r.Afferenze)
+                                                            {
+                                                                if (af.Descr_afferenza != "")
+                                                                {
+                                                                    <p> @af.Descr_afferenza [Cod. @af.Cod_afferenza]</p>
+
+                                                                }
+                                                                
+                                                            }
+                                                        }
+
+                                                    }
+                                                </dd>
+
+
+                                            }
+                                        }
+                                        <hr />
+
+                                               @* afferenze*@
+
+                                                
+            
+        
+
+
+
        
-    </dl>
-    }
-    </div>
+        <hr />
+
+
+                                       
+
+
+
+                                       
+
+
+        </dl>
+                    </div>
+                }
+                @*fine personale*@
+
+
+
+
+                @*Studente*@
+                @if (Model.Studente != null)
+                {
+                    <div class="col-md-4">
+                        <dl class="row" style="border:1px solid #eee">                       
+                <dt class = "col-sm-12"><u style="font-size:18px;color: #043659;">Studente</u></dt>
+                <dt class = "col-sm-4">
+                    @Html.DisplayNameFor(model => model.Studente.Esse3PersID)
+                </dt>
+
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.Studente.Esse3PersID)
+                </dd>
+
+                <dt class = "col-sm-4">
+                @Html.DisplayNameFor(model => model.Studente.Uid)
+                </dt>
+                 <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.Studente.Uid)
+                </dd>
+
+                 <dt class = "col-sm-4">
+                @Html.DisplayNameFor(model => model.Studente.Mail)
+                </dt>
+                 <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.Studente.Mail)
+                </dd>
+
+                 <dt class = "col-sm-4">
+                @Html.DisplayNameFor(model => model.Studente.Mail_esterna)
+                </dt>
+                 <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.Studente.Mail_esterna)
+                </dd>
+
+                  <dt class = "col-sm-4">
+                @Html.DisplayNameFor(model => model.Studente.Cellulare)
+                </dt>
+                  @if (Model.Studente.Cellulare != null && Model.Studente.Cellulare != "")
+                                {
+                    <dd class = "col-sm-8">
+                        @Html.DisplayFor(model => Model.Studente.Cellulare)
+                    </dd>
+                }
+                else
+                {
+                    <dd class = "col-sm-8">N.D.</dd>
+                }
+
+                @*corsi*@   
+                 @if (Model.Studente.Corsi != null)
+                                {
+                                    <hr />
+                                    if (Model.Studente.Corsi.Count > 1)
+                                    {
+                                        <dt class = "col-sm-12"><u>Corsi</u></dt>
+                                        <dd></dd>
+                                    }
+
+                                    foreach (Userbox.Models.APICorso c in Model.Studente.Corsi)
+                                    {
+
+                                     
+
+
+                                        <dt class = "col-sm-4">Corso</dt>
+                                        <dd class = "col-sm-8"> @c.Corso_studio  [ @c.Tipo_corso] </dd>
+                                       
+                                        <dt class = "col-sm-4">Matricola</dt>
+                                        <dd class = "col-sm-8">@c.Matricola</dd>
+                                        
+                                        <dt class = "col-sm-4">Data Validità Studente</dt>
+                                        <dd class = "col-sm-8">
+                                            @c.Data_inizio -
+
+                                            @if (c.Data_fine == null)
+                                            {<p style="display:inline">N.D.</p>}
+                                            else
+                                            { 
+                                                @c.Data_fine
+                                            }
+                                            
+                                        </dd>
+                                    }
+                                }
+                                <hr />
+
+                 @* fine corsi*@   
+                
+                
+
+
+
+</dl>
+</div>
+} 
+@*fine studente*@
+  } @* model != null*@
+          
+      
+    
+  
 </div>
 
+</div>
 </div>
 </div>
