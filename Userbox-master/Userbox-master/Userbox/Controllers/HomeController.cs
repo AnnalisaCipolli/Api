@@ -23,8 +23,9 @@ namespace Userbox.Controllers
         public IActionResult Index()
         {
           WebServiceCall  wsc = new WebServiceCall(_config);
-            APIAnagraficaCarriera ac=    wsc.GetAnagraficaIDMByCF(_utenteauth.CodFiscale);  
-
+            List<System.Security.Claims.Claim> lista= User.Claims.ToList();
+            APIAnagraficaCarriera ac = wsc.GetAnagraficaIDMByCF(lista.Where(x => x.Type == "fiscalNumber").First().Value);
+            ViewBag.nome = User.Identity.Name;
             return View(ac);
         }
 
