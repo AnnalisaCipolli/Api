@@ -32,6 +32,20 @@ namespace Userbox.Models
             return r;
         }
 
+        public List<string> GetCapabilityIDMByCF(string cod_fiscale)
+        {
+            string ris = "";
+            List<string> lista = new List<string>();
+
+            ris = WebServiceConnector.getRequester(_config["WebService:url_API_IDM_USER"], _config["WebService:token_API_IDM_USER"], _config["WebService:method_API_IDM_USER_Capability_cf"] + cod_fiscale, null);
+
+            if (ris != "")
+            {
+                lista = JsonConvert.DeserializeObject<List<string>>(ris);
+            }
+
+            return lista;
+        }
 
 
 

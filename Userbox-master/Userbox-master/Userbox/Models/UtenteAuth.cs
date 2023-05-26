@@ -15,7 +15,7 @@ namespace Userbox.Models
         public string? Email { get; set; }
         public string? UnipiUserID { get; set; }
 
-
+        public List<string> Capability { get; set; }
 
     }
 

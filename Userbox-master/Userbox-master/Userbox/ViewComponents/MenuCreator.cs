@@ -11,7 +11,8 @@ namespace Userbox.ViewComponents
         public enum Module
         {
             Home,
-            Utenti
+            Utenti,
+            CreazioneOspite
         }
         public static SidebarMenu AddHeader(string name)
         {

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Diagnostics;
 using Userbox.Models;
 
@@ -22,10 +23,12 @@ namespace Userbox.Controllers
         [Authorize]
         public IActionResult Index()
         {
+           List<System.Security.Claims.Claim> cc=  HttpContext.User.Claims.ToList();
+           
+
           WebServiceCall  wsc = new WebServiceCall(_config);
-            List<System.Security.Claims.Claim> lista= User.Claims.ToList();
-            APIAnagraficaCarriera ac = wsc.GetAnagraficaIDMByCF(lista.Where(x => x.Type == "fiscalNumber").First().Value);
-            ViewBag.nome = User.Identity.Name;
+            APIAnagraficaCarriera ac = wsc.GetAnagraficaIDMByCF(_utenteauth.CodFiscale);
+            ViewBag.nome = User.Identity.Name + "- " + System.Text.Json.JsonSerializer.Serialize(_utenteauth);
             return View(ac);
         }
 
@@ -39,7 +42,8 @@ namespace Userbox.Controllers
         [Authorize]
         public IActionResult Privacy()
         {
-            ViewBag.stato = User.Identity.IsAuthenticated; 
+            ViewBag.stato = User.Identity.IsAuthenticated + " " + User.Identity.Name + "- ";
+                 
             return View();
         }
 

@@ -8,11 +8,15 @@ namespace Userbox.Controllers
     public class AccountController : Controller
     {
         private readonly UtenteAuth _utenteAuth;
+        private readonly ConfigurationManager _config;
 
 
-        public AccountController(UtenteAuth utenteauth)
+
+        public AccountController(UtenteAuth utenteauth, ConfigurationManager config)
         {
             _utenteAuth = utenteauth;
+            _config = config;
+
         }
 
         // GET: AccountController
@@ -62,6 +66,12 @@ namespace Userbox.Controllers
             _utenteAuth.Email = lista.Where(x => x.Type == "email").First().Value;
             _utenteAuth.UnipiUserID = lista.Where(x => x.Type == "UnipiUserID").First().Value;
             _utenteAuth.AuthType = lista.Where(x => x.Type == "tenant").First().Value;
+            /* vediamo le capability da IDM*/
+            WebServiceCall wsc = new WebServiceCall(_config);
+            _utenteAuth.Capability = new List<string>();
+            _utenteAuth.Capability = wsc.GetCapabilityIDMByCF(_utenteAuth.CodFiscale);
+
+            _utenteAuth.Capability.Add("AmministratoreUserbox");
         }
         //
         // POST: /Account/Login
