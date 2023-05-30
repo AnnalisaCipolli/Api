@@ -30,56 +30,6 @@ builder.Services.AddSingleton(config);
 
 builder.Services.Configure<AppSettings>(configuration.GetSection("AppSettings"));
 builder.Services.AddControllersWithViews();
-//builder.Services.AddAuthentication(
-//    options =>
-//    {
-//        options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-//        options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-//        options.DefaultChallengeScheme = "UnipiAuth";
-//    })
-//    .AddCookie() // https://localhost:7077/MicrosoftIdentity/Account/Signout
-//    .AddOAuth("UnipiAuth", oAuthOptions =>
-//    {
-//        oAuthOptions.ClientId = config["AuthenticationMgt:ClientID"];
-//        oAuthOptions.ClientSecret = config["AuthenticationMgt:ClientSecret"];
-//        oAuthOptions.AuthorizationEndpoint = config["AuthenticationMgt:AuthorizationEndpoint"];
-//        oAuthOptions.TokenEndpoint = config["AuthenticationMgt:TokenEndpoint"];
-//        oAuthOptions.UserInformationEndpoint = config["AuthenticationMgt:UserinfoEndpoint"];
-//        oAuthOptions.CallbackPath = new PathString(config["AuthenticationMgt:CallbackPath"]);
-//        oAuthOptions.Scope.Add(config["AuthenticationMgt:Scope"]);
-//        oAuthOptions.SaveTokens = true;
-
-//        foreach (string c in config.GetSection("AuthenticationMgt:Claims").Get<List<string>>())
-//        {
-//            oAuthOptions.ClaimActions.MapJsonKey(c, c);
-//        }
-
-//        // web can map json values to any standard-defined ClaimTypes names
-//        oAuthOptions.ClaimActions.MapJsonKey(ClaimTypes.UserData, "sub");
-//        // or use any name we prefer
-//        oAuthOptions.ClaimActions.MapJsonKey("UnipiUserID", "sub");
-//        var originalOnCreatingTicketEvent = oAuthOptions.Events.OnCreatingTicket;
-
-//        oAuthOptions.Events = new OAuthEvents
-//        {
-//            OnCreatingTicket = async context =>
-//            {
-//                originalOnCreatingTicketEvent?.Invoke(context);
-
-//                var request = new HttpRequestMessage(HttpMethod.Get, context.Options.UserInformationEndpoint);
-//                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", context.AccessToken);
-//                request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-//                var response = await context.Backchannel.SendAsync(request, context.HttpContext.RequestAborted);
-
-//                string userinfo = await response.Content.ReadAsStringAsync();
-//                var myuser = JsonDocument.Parse(userinfo);
-
-//                context.RunClaimActions(myuser.RootElement);
-//                context.HttpContext.Response.Cookies.Append("unipiAuthToken", context.AccessToken);
-//            }
-//        };
-//    })
-//;
 
 
 builder.Services.AddAuthentication(
@@ -194,7 +144,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=Loginunipi}/{id?}");
 
 app.Run();
 #endregion

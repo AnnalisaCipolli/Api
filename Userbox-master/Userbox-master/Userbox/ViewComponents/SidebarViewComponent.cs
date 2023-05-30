@@ -23,13 +23,15 @@ namespace Userbox.ViewComponents
 
             if (_utenteauth.Capability.Contains("AmministratoreUserbox"))
             {
-                sidebars.Add(ModuleHelper.AddTree(_localizer["MenuMain_Utenti"], "fa fa-users"));
+                sidebars.Add(ModuleHelper.AddTree(_localizer["MenuMain_Ospiti"], "fa fa-users"));
 
 
 
                 sidebars.Last().TreeChild = new List<SidebarMenu>()
                 {
-                    ModuleHelper.AddModule(ModuleHelper.Module.Utenti, _localizer["MenuMain_Users"], Url.Action("Users", "Home", null),"fa fa-users")
+                    ModuleHelper.AddModule(ModuleHelper.Module.Utenti, _localizer["MenuMain_Ospiti_Crea"], Url.Action("Create", "Ospite", null),"fa fa-plus")
+                    ,
+                    ModuleHelper.AddModule(ModuleHelper.Module.Utenti, _localizer["MenuMain_Ospiti_Visualizza"], Url.Action("Index", "Ospite", null),"fa fa-users")
                 };
             }
             return View(sidebars);

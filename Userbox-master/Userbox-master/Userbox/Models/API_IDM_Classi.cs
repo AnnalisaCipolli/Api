@@ -174,6 +174,92 @@ namespace Userbox.Models
 
     }
 
+    public class JsonNazione
+    {
+
+
+        [Display(Name = "Nazione")]
+        public string Nazione_nome { get; set; }
+
+        public string Nazione_catasto { get; set; }
+
+    }
+
+    public class JsonRegione
+    {
+
+        [Display(Name = "Regione ")]
+
+        public string Regione_nome { get; set; }
+
+
+        [Display(Name = "Codice Regione")]
+
+        public string Regione_codice { get; set; }
+
+
+
+    }
+
+    public class JsonProvincia
+    {
+
+        [Display(Name = "Provincia ")]
+
+        public string Provincia_nome { get; set; }
+
+
+        [Display(Name = "Codice ISTAT Provincia")]
+
+        public string Provincia_codice { get; set; }
+
+
+    }
+
+    public class JsonComune
+    {
+
+        public string Id { get; set; }
+
+
+
+
+        [Display(Name = "Regione ")]
+
+        public string Regione_nome { get; set; }
+
+
+        [Display(Name = "Codice Regione")]
+
+        public string Regione_codice { get; set; }
+
+
+
+        [Display(Name = "Provincia ")]
+
+        public string Provincia_nome { get; set; }
+
+
+        [Display(Name = "Codice ISTAT Provincia")]
+
+        public string Provincia_codice { get; set; }
+
+
+        [Display(Name = "Comune ")]
+
+        public string Comune_nome { get; set; }
+
+
+        [Display(Name = "Codice ISTAT Comune")]
+        public string Comune_codice { get; set; }
+
+
+        [Display(Name = "Codice Catastale Comune")]
+
+        public string Comune_codice_catasto { get; set; }
+
+    }
+
 
 
 

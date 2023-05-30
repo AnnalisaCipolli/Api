@@ -70,7 +70,7 @@ namespace Userbox.Controllers
             WebServiceCall wsc = new WebServiceCall(_config);
             _utenteAuth.Capability = new List<string>();
             _utenteAuth.Capability = wsc.GetCapabilityIDMByCF(_utenteAuth.CodFiscale);
-
+            /*TEST */
             _utenteAuth.Capability.Add("AmministratoreUserbox");
         }
         //

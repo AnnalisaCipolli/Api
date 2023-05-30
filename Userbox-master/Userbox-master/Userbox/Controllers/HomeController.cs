@@ -28,7 +28,7 @@ namespace Userbox.Controllers
 
           WebServiceCall  wsc = new WebServiceCall(_config);
             APIAnagraficaCarriera ac = wsc.GetAnagraficaIDMByCF(_utenteauth.CodFiscale);
-            ViewBag.nome = User.Identity.Name + "- " + System.Text.Json.JsonSerializer.Serialize(_utenteauth);
+           // ViewBag.nome = User.Identity.Name + "- " + System.Text.Json.JsonSerializer.Serialize(_utenteauth);
             return View(ac);
         }
 

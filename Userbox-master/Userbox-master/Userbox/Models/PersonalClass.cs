@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -49,5 +50,96 @@ namespace Userbox.Models
         public int Conteggio { get; set; } // variabile di supporto
 
     }
+
+    public class ViewOspite
+    {
+
+
+        public string Id { get; set; }
+        public string Tipo { get; set; }
+
+        [Required]
+        [Display(Name = "Nome")]
+        public string Nome { get; set; }
+
+
+
+        [Required]
+        [Display(Name = "Cognome")]
+        public string Cognome { get; set; }
+
+
+
+        [StringLength(16, MinimumLength = 16, ErrorMessage = "Il codice fiscale è di 16 caratteri")]
+        [Required]
+        [Display(Name = "Codice Fiscale")]
+        public string Cod_fiscale { get; set; }
+
+
+        [Required]
+        [Display(Name = "Nazione di Nascita")]
+        public string SelectedNazione_nascita { get; set; }
+
+        [Display(Name = "Regione di Nascita")]
+        public string SelectedRegione_nascita { get; set; }
+
+        [Display(Name = "Provincia di Nascita")]
+        public string SelectedProvincia_nascita { get; set; }
+
+        [Display(Name = "Comune di Nascita")]
+        public string SelectedComune_nascita { get; set; }
+
+
+
+        [Display(Name = "Nazione di Nascita")]
+        public SelectList Nazione_nascita { get; set; }
+
+
+        [Display(Name = "Regione di Nascita")]
+        public SelectList Regione_nascita { get; set; }
+
+
+        [Display(Name = "Provincia di Nascita")]
+
+        public SelectList Provincia_nascita { get; set; }
+
+        [Display(Name = "Comune di Nascita")]
+
+        public SelectList Comune_nascita { get; set; }
+
+
+
+        [Required]
+        [Display(Name = "Data di nascita")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+        public DateTime? Data_nascita { get; set; }
+
+
+        [Required]
+        [Display(Name = "Mail")]
+        [DataType(DataType.EmailAddress)]
+        public string Mail { get; set; }
+
+
+        [Required]
+        [Display(Name = "Mail Esterna")]
+        [DataType(DataType.EmailAddress)]
+        public string Mail_esterna { get; set; }
+
+        [Display(Name = "Data di fine validità")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+        public DateTime? Data_fine { get; set; }
+
+
+
+
+    }
+
+
+    
+
+
 
 }
