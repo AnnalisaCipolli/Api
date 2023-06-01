@@ -11,11 +11,14 @@ namespace Userbox.Controllers
     {
 
         private readonly ConfigurationManager _config;
+        WebServiceCall wsc;
 
 
         public OspiteController(ConfigurationManager config)
         {
             _config = config;
+            wsc = new WebServiceCall(_config);
+
 
         }
 
@@ -64,8 +67,7 @@ namespace Userbox.Controllers
 
         private void ConfigureViewModel(ViewOspite model)
         {
-            WebServiceCall wsc = new WebServiceCall(_config);
-
+            
 
             List<JsonNazione> listan = wsc.GetListaNazioniIDM();
             List<SelectListItem> lista_nazioni = new List<SelectListItem>();
@@ -76,6 +78,7 @@ namespace Userbox.Controllers
             }
 
             model.Nazione_nascita = new SelectList(lista_nazioni, "Value", "Text");
+
 
             if (model.SelectedNazione_nascita != null)
             {
@@ -140,6 +143,64 @@ namespace Userbox.Controllers
             }
 
 
+
+
+        }
+
+
+        [HttpPost]
+        public JsonResult GetListaRegioni()
+        {
+            List<JsonRegione> listar = wsc.GetListaRegioniIDM();
+            List<SelectListItem> lista_regioni = new List<SelectListItem>();
+            foreach (JsonRegione r in listar)
+            {
+                lista_regioni.Add(new SelectListItem { Value = r.Regione_codice, Text = r.Regione_nome });
+
+            }
+            return Json(new SelectList(lista_regioni, "Value", "Text")  );
+
+            
+        }
+
+
+        [HttpPost]
+        public JsonResult GetListaProvince(string regione)
+        {
+            if (regione == null)
+            {
+                return Json(new { Success = "False", responseText = "Parametro in input non presente" });
+            }
+            List<JsonProvincia> listap = wsc.GetListaProvinceIDM(regione);
+            List<SelectListItem> lista_province = new List<SelectListItem>();
+            foreach (JsonProvincia r in listap)
+            {
+                lista_province.Add(new SelectListItem { Value = r.Provincia_codice, Text = r.Provincia_nome });
+
+            }
+            return Json(new SelectList(lista_province, "Value", "Text"));
+
+
+
+        }
+
+        [HttpPost]
+        public JsonResult GetListaComuni(string provincia)
+        {
+            if (provincia == null)
+            {
+                return Json(new { Success = "False", responseText = "Parametro in input non presente" });
+            }
+            List<JsonComune> listac = wsc.GetListaComuniIDM(provincia);
+            List<SelectListItem> lista_comuni = new List<SelectListItem>();
+            foreach (JsonComune c in listac)
+            {
+                lista_comuni.Add(new SelectListItem { Value = c.Comune_codice, Text = c.Comune_nome });
+
+            }
+            return Json(new SelectList(lista_comuni, "Value", "Text"));
+
+           
         }
 
 

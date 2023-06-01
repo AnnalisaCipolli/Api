@@ -145,3 +145,141 @@
     </div>
     
 </section>
+
+
+@section scripts {
+    <script>
+
+$( document ).ready(function() {
+    if ($("#SelectedNazione_nascita").val() == "ITALIA") {
+        $("#d_r").show();
+
+        if ($("#SelectedRegione_nascita").val() != "") {
+            $("#d_p").show();
+
+            if ($("#SelectedProvincia_nascita").val() != "") {
+                $("#d_c").show();
+            }
+
+        }
+
+    }
+
+
+
+
+
+
+});
+
+
+         $("#SelectedNazione_nascita").change(function () {
+            if ($("#SelectedNazione_nascita").val() == "ITALIA") {
+                $("#d_r").show();
+
+
+                $("#SelectedRegione_nascita").empty();
+
+                $.ajax({
+                    type: "POST",
+                     url:"@Url.Action("GetListaRegioni")",
+                    dataType: 'json',
+                    success: function (regioni) {
+
+                        var s = "";
+                       for (var i = 0; i < regioni.length; i++) {
+                            s += '<option value="' + regioni[i].value + '">' + regioni[i].text+ '</option>';
+                        }
+                        $("#SelectedRegione_nascita").html(s);
+
+                    },
+                    error: function (ex) {
+                        alert('Failed.' + ex.responseText);
+                    }
+                });
+
+            }
+            else {
+                $("#SelectedRegione_nascita").empty();
+
+                $("#d_r").hide();
+                $("#d_p").hide();
+                $("#d_c").hide();
+
+            }
+         })
+
+
+         $("#SelectedRegione_nascita").change(function () {
+            if ($("#SelectedRegione_nascita").val() != "") {
+                $("#d_p").show();
+
+
+                $("#SelectedProvincia_nascita").empty();
+
+                $.ajax({
+                    type: "POST",
+                     url:"@Url.Action("GetListaProvince")",
+                    dataType: 'json',
+                     data: { regione: $("#SelectedRegione_nascita").val() },
+                    success: function (province) {
+                         var s = "";
+                       for (var i = 0; i < regioni.length; i++) {
+                            s += '<option value="' + regioni[i].value + '">' + regioni[i].text+ '</option>';
+                        }
+                        $("#SelectedProvincia_nascita").html(s);
+
+                        );
+
+                    },
+                    error: function (ex) {
+                        alert('Failed.' + ex.responseText);
+                    }
+                });
+
+            }
+            else {
+                $("#SelectedProvincia_nascita").empty();
+
+                $("#d_p").hide();
+                $("#d_c").hide();
+            }
+         })
+
+
+         $("#SelectedProvincia_nascita").change(function () {
+            if ($("#SelectedProvincia_nascita").val() != "") {
+                $("#d_c").show();
+
+
+                $("#SelectedComune_nascita").empty();
+
+                $.ajax({
+                    type: "POST",
+                     url:"@Url.Action("GetListaComuni")",
+                    dataType: 'json',
+                     data: { provincia: $("#SelectedProvincia_nascita").val() },
+                    success: function (comuni) {
+                        var s = "";
+                       for (var i = 0; i < regioni.length; i++) {
+                            s += '<option value="' + regioni[i].value + '">' + regioni[i].text+ '</option>';
+                        }
+                        $("#SelectedComune_nascita").html(s);
+
+                    },
+                    error: function (ex) {
+                        alert('Failed.' + ex.responseText);
+                    }
+                });
+
+            }
+            else {
+                $("#SelectedComune_nascita").empty();
+
+                $("#d_c").hide();
+            }
+         })
+
+
+    </script>
+    }
