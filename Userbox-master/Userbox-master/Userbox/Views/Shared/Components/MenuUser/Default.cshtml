@@ -1,11 +1,12 @@
 ﻿@using System.Security.Principal
+@using Microsoft.AspNetCore.Http
 
 @if (User.Identity.IsAuthenticated)
 {
     <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
             <i class="fas fa-user"></i>
-            <span>  @User.Identities.FirstOrDefault()?.Claims?.Where(c => c.Type == "name").FirstOrDefault()?.Value</span>
+            <span>  @User.Identities.FirstOrDefault()?.Claims?.Where(c => c.Type == "family_name").FirstOrDefault()?.Value</span>
         </a>
 
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -13,8 +14,10 @@
                 <div class="media">
                     <div class="media-body text-left ">
                         <p class="text text-lg">
-                            @User.Identities.FirstOrDefault()?.Claims.Where(c => c.Type == "name").FirstOrDefault()?.Value</p>
-                        <p class="text text-sm">
+                          @User.Identities.FirstOrDefault()?.Claims.Where(c => c.Type == "family_name").FirstOrDefault()?.Value 
+                          @User.Identities.FirstOrDefault()?.Claims.Where(c => c.Type == "given_name").FirstOrDefault()?.Value</p>
+                        
+                          <p class="text text-sm">
                             (@User.Identity.Name)
                         </p>
 

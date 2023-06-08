@@ -77,7 +77,7 @@ builder.Services.AddAuthentication(
                 var myuser = JsonDocument.Parse(userinfo);
 
                 context.RunClaimActions(myuser.RootElement);
-                //  context.HttpContext.Response.Cookies.Append("unipiAuthToken", context.AccessToken);
+                context.HttpContext.Response.Cookies.Append("unipiAuthToken", context.AccessToken);
 
                 var cookieOptions = new CookieOptions
                 {
@@ -145,7 +145,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Account}/{action=Loginunipi}/{id?}");
+    pattern: "{controller=Account}/{action=LoginUnipi}/{id?}");
 
 app.Run();
 #endregion

@@ -23,12 +23,8 @@ namespace Userbox.Controllers
         [Authorize]
         public IActionResult Index()
         {
-           List<System.Security.Claims.Claim> cc=  HttpContext.User.Claims.ToList();
-           
-
-          WebServiceCall  wsc = new WebServiceCall(_config);
+            WebServiceCall  wsc = new WebServiceCall(_config);
             APIAnagraficaCarriera ac = wsc.GetAnagraficaIDMByCF(_utenteauth.CodFiscale);
-           // ViewBag.nome = User.Identity.Name + "- " + System.Text.Json.JsonSerializer.Serialize(_utenteauth);
             return View(ac);
         }
 
@@ -62,6 +58,7 @@ namespace Userbox.Controllers
                 Response.Cookies.Delete(cookie);
             }
             HttpContext.User = null;
+            HttpContext.Session = null;
 
             SignOut(CookieAuthenticationDefaults.AuthenticationScheme);
             return View("Logout");

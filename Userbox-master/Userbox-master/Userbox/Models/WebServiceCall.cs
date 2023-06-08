@@ -32,6 +32,48 @@ namespace Userbox.Models
             return r;
         }
 
+        public List<JsonOspite> GetListaOspite()
+        {
+            string ris = "";
+            List<APIAnagraficaCarriera> lista = new List<APIAnagraficaCarriera>();
+            List<JsonOspite> lista_end = new List<JsonOspite>();
+
+            ris = WebServiceConnector.getRequester(_config["WebService:url_ws02_API_IDM"], _config["WebService:token_ws02_API_IDM"], _config["WebService:method_ws02_API_IDM_ListaOspite"] , null);
+
+            if (ris != "")
+            {
+                lista = JsonConvert.DeserializeObject<List<APIAnagraficaCarriera>>(ris);
+            }
+
+
+            foreach (APIAnagraficaCarriera a in lista)
+            {
+                lista_end.Add(new JsonOspite { 
+                nome= a.Nome,
+                cognome= a.Cognome,
+                codice_fiscale = a.Cod_fiscale,
+                data_nascita = a.Data_nascita.Value,
+                data_inizio = a.Ospite.Data_inizio.Value,
+                data_fine = a.Ospite.Data_fine.Value,
+                mail= a.Ospite.Mail,
+                mail_esterna = a.Ospite.Mail_esterna
+                });
+            }
+
+            return lista_end;
+        }
+
+
+        public string PostAnagraficaOspite(JsonOspite jo)
+        {
+            string ris = "";
+            string json = JsonConvert.SerializeObject(jo);
+            ris = WebServiceConnector.postRequester(_config["WebService:url_API_IDM"], _config["WebService:method_API_IDM_PostOspite"], _config["WebService:token_API_IDM"] ,json, false);
+
+            
+            return ris;
+        }
+
         public List<JsonNazione> GetListaNazioniIDM()
         {
             string ris = "";

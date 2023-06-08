@@ -17,7 +17,45 @@ namespace Userbox.Models
 
         public List<string> Capability { get; set; }
 
+
+        public UtenteAuth Valorizza(List<System.Security.Claims.Claim> lista, ConfigurationManager _config)
+        {
+
+            this.Sub = lista.Where(x => x.Type == "sub").First().Value;
+            this.Principal = lista.Where(x => x.Type == "principal").First().Value;
+            this.Nome = lista.Where(x => x.Type == "given_name").First().Value;
+            this.Cognome = lista.Where(x => x.Type == "family_name").First().Value;
+            this.CodFiscale = lista.Where(x => x.Type == "fiscalNumber").First().Value;
+            this.Email = lista.Where(x => x.Type == "email").First().Value;
+            this.UnipiUserID = lista.Where(x => x.Type == "UnipiUserID").First().Value;
+            this.AuthType = lista.Where(x => x.Type == "tenant").First().Value;
+            /* vediamo le capability da IDM*/
+            WebServiceCall wsc = new WebServiceCall(_config);
+            this.Capability = new List<string>();
+            this.Capability = wsc.GetCapabilityIDMByCF(this.CodFiscale);
+            /*TEST */
+            this.Capability.Add("AmministratoreUserbox");
+
+
+           
+            return this;
+        }
+
     }
+
+
+    //public class UserFromWSo2
+    //{
+    //    public string principal { get; set; }
+    //    public string sub { get; set; }
+    //    public string given_name { get; set; }
+    //    public string family_name { get; set; }
+    //    public string fiscalNumber { get; set; }
+    //    public string email { get; set; }
+    //    public string tenant { get; set; }
+
+        
+    //}
 
 
 }

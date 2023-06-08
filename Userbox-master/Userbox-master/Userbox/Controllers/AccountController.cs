@@ -38,12 +38,12 @@ namespace Userbox.Controllers
         public ActionResult LoginUnipi()
         {
 
-           var lista = User.Claims.ToList();
+            var lista = User.Claims.ToList();
 
             if (lista.Count() > 0)
             {
-                GestisciUtente(lista);
-                //string unipiuser = lista.Where(x => x.Type == "UnipiUserID").FirstOrDefault().Value;
+                _utenteAuth.Valorizza(lista, _config);
+              
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -52,28 +52,8 @@ namespace Userbox.Controllers
                 ViewBag.MsgType = "WARNING";
                 return View("Login");
             }
-            //return View();
         }
-
-        private void GestisciUtente(List<System.Security.Claims.Claim> lista)
-        {
-            _utenteAuth.Sub = lista.Where(x => x.Type == "sub").First().Value;
-            _utenteAuth.Principal = lista.Where(x => x.Type == "principal").First().Value;
-           // _utenteAuth.Credential = lista.Where(x => x.Type == "credential").First().Value;
-            _utenteAuth.Nome = lista.Where(x => x.Type == "given_name").First().Value;
-            _utenteAuth.Cognome = lista.Where(x => x.Type == "family_name").First().Value;
-            _utenteAuth.CodFiscale = lista.Where(x => x.Type == "fiscalNumber").First().Value;
-            _utenteAuth.Email = lista.Where(x => x.Type == "email").First().Value;
-            _utenteAuth.UnipiUserID = lista.Where(x => x.Type == "UnipiUserID").First().Value;
-            _utenteAuth.AuthType = lista.Where(x => x.Type == "tenant").First().Value;
-            /* vediamo le capability da IDM*/
-            WebServiceCall wsc = new WebServiceCall(_config);
-            _utenteAuth.Capability = new List<string>();
-            _utenteAuth.Capability = wsc.GetCapabilityIDMByCF(_utenteAuth.CodFiscale);
-            /*TEST */
-            _utenteAuth.Capability.Add("AmministratoreUserbox");
-        }
-        //
+        
         // POST: /Account/Login
         [HttpPost]
         [AllowAnonymous]

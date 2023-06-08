@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Userbox.Models.JsonOspite>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Crea utente</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>N.</th>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Codice fiscale</th>
+            <th>Data nascita</th>
+            <th>Nazione/Comune nascita</th>
+            <th>Mail</th>
+            <th>Mail esterna</th>
+            <th>Data inizio</th>
+            <th>Data fine</th>
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>@item.nome</td>
+            <td>@item.cognome</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+               @* @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+              @*  @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

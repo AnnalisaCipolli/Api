@@ -25,7 +25,16 @@ namespace Userbox.Controllers
         // GET: OspiteController
         public ActionResult Index()
         {
-            return View();
+            List<JsonOspite> lista = new List<JsonOspite>();
+            try
+            {
+                lista = wsc.GetListaOspite();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return View(lista);
         }
 
         // GET: OspiteController/Details/5
@@ -34,7 +43,8 @@ namespace Userbox.Controllers
             return View();
         }
 
-        // GET: OspiteController/Create
+
+        //[CustomAuth(role = "Amministratore", capabilities = "CreazioneAccountOspite", condizioni_or = true)]
         public ActionResult Create()
         {
           
@@ -50,11 +60,74 @@ namespace Userbox.Controllers
         // POST: OspiteController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
+        public ActionResult Create(ViewOspite model)
+        { 
             try
             {
-                return RedirectToAction(nameof(Index));
+                string messaggio = "";
+                APIAnagraficaCarriera psupporto = wsc.GetAnagraficaIDMByCF(model.Cod_fiscale);
+
+
+                if (psupporto.Cod_fiscale != null)
+                {
+                    ConfigureViewModel(model);
+                    ModelState.AddModelError("Cod_fiscale", "L'utente con codice fiscale " + psupporto.Cod_fiscale + " è già presente");
+                    return View(model);
+                }
+                else
+                {
+                    if (model.SelectedNazione_nascita == "ITALIA" && model.SelectedComune_nascita == "")
+                    {
+                        ConfigureViewModel(model);
+                        ModelState.AddModelError("SelectedNazione_nascita", "Se la Nazione di Nascita è ITALIA, specificare il comune di nascita");
+                        return View(model);
+                    }
+                    if (model.Data_fine< DateTime.Now)
+                    {
+                        ConfigureViewModel(model);
+                        ModelState.AddModelError("Data_fine", "La data di fine validità deve essere successiva ad oggi ");
+                        return View(model);
+                    }
+
+                    if (!ModelState.IsValid)
+                    {
+                        return View(model);
+                    }
+                    else 
+                    {
+
+
+                        string nazione = wsc.GetListaNazioniIDM().Where(x => x.Nazione_catasto == model.SelectedNazione_nascita).First().Nazione_nome;
+                        string comune = (model.SelectedComune_nascita==null || model.SelectedComune_nascita=="")? "":  wsc.GetComuneByIstatIDM(model.SelectedComune_nascita).Comune_nome;
+
+                        /* creo il json per inserire su mongo l'utente ospite*/
+                        JsonOspite jo = new JsonOspite
+                        {
+                            nome = model.Nome.Trim().ToUpper(),
+                            cognome = model.Cognome.Trim().ToUpper(),
+                            codice_fiscale = model.Cod_fiscale.Trim().ToUpper(),
+                            mail = model.Mail.Trim().ToUpper(),
+                            mail_esterna = model.Mail_esterna.Trim().ToUpper(),
+                            data_nascita = model.Data_nascita.Value,
+                            nazione_nascita = nazione,
+                            nazione_nascita_cod = model.SelectedNazione_nascita.Trim().ToUpper(),
+                            comune_nascita_cod = model.SelectedComune_nascita.Trim().ToUpper(),
+                            comune_nascita = comune.Trim().ToUpper(),
+                            data_fine = model.Data_fine.Value
+                        };
+                        messaggio = wsc.PostAnagraficaOspite(jo);
+
+
+                        return View("index");
+                    }
+                       
+                }
+
+
+
+
+
+                
             }
             catch
             {
@@ -67,7 +140,6 @@ namespace Userbox.Controllers
 
         private void ConfigureViewModel(ViewOspite model)
         {
-            
 
             List<JsonNazione> listan = wsc.GetListaNazioniIDM();
             List<SelectListItem> lista_nazioni = new List<SelectListItem>();

@@ -46,8 +46,11 @@ namespace Userbox.Models
             string content = "", endpoint;
 
             endpoint = url + method;
-            if (urlParam != null)
-                endpoint += "/" + urlParam;
+
+            endpoint = "http://localhost:61106/apiuserbox/utenteospite";
+            
+            //if (urlParam != null)
+            //    endpoint += "/" + urlParam;
             var client = new WebClient();
             client.Headers.Set("Authorization", "Bearer " + token);
             client.Headers.Set("Accept", "application/json");
@@ -61,7 +64,7 @@ namespace Userbox.Models
                 }
                 else
                 {
-                    content = client.UploadString(endpoint, "POST", "");
+                    content = client.UploadString(endpoint, "POST", urlParam);
                 }
 
             }

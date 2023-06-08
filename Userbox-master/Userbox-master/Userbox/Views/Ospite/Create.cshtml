@@ -13,7 +13,8 @@
                     <div class="form-horizontal">
                         <div class="col-md-12">
 
-
+                             <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
 
                             <div class="form-group row">
@@ -106,13 +107,7 @@
 
                             </div>
 
-                            <div class="form-group  row">
-                                @Html.LabelFor(model => model.Data_fine, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-md-10">
-                                    @Html.EditorFor(model => model.Data_fine, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.Data_fine, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
+                          
 
                             <div class="form-group row">
                                 @Html.LabelFor(model => model.Data_fine, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -126,15 +121,13 @@
                                     <input type="submit" value="Crea utente" class="btn btn-primary" />
                                 </div>
 
+<br />
+<br />
+<br />
+<br />
+                                </form>
 
                         </div>
-
-
-
-
-
-
-
 
 
                     </div>
@@ -174,11 +167,20 @@ $( document ).ready(function() {
 
 
          $("#SelectedNazione_nascita").change(function () {
+
             if ($("#SelectedNazione_nascita").val() == "ITALIA") {
+
+
+               
                 $("#d_r").show();
+                $("#d_p").hide();
+                $("#d_c").hide();
 
 
                 $("#SelectedRegione_nascita").empty();
+                $("#SelectedProvincia_nascita").empty();
+                $("#SelectedNascita_nascita").empty();
+
 
                 $.ajax({
                     type: "POST",
@@ -212,10 +214,12 @@ $( document ).ready(function() {
 
          $("#SelectedRegione_nascita").change(function () {
             if ($("#SelectedRegione_nascita").val() != "") {
+                
                 $("#d_p").show();
-
-
                 $("#SelectedProvincia_nascita").empty();
+                $("#SelectedComune_nascita").empty();
+                $("#d_c").hide();
+
 
                 $.ajax({
                     type: "POST",
@@ -224,12 +228,12 @@ $( document ).ready(function() {
                      data: { regione: $("#SelectedRegione_nascita").val() },
                     success: function (province) {
                          var s = "";
-                       for (var i = 0; i < regioni.length; i++) {
-                            s += '<option value="' + regioni[i].value + '">' + regioni[i].text+ '</option>';
+                       for (var i = 0; i < province.length; i++) {
+                            s += '<option value="' + province[i].value + '">' + province[i].text+ '</option>';
                         }
                         $("#SelectedProvincia_nascita").html(s);
 
-                        );
+                        
 
                     },
                     error: function (ex) {
@@ -249,9 +253,8 @@ $( document ).ready(function() {
 
          $("#SelectedProvincia_nascita").change(function () {
             if ($("#SelectedProvincia_nascita").val() != "") {
+                
                 $("#d_c").show();
-
-
                 $("#SelectedComune_nascita").empty();
 
                 $.ajax({
@@ -261,8 +264,8 @@ $( document ).ready(function() {
                      data: { provincia: $("#SelectedProvincia_nascita").val() },
                     success: function (comuni) {
                         var s = "";
-                       for (var i = 0; i < regioni.length; i++) {
-                            s += '<option value="' + regioni[i].value + '">' + regioni[i].text+ '</option>';
+                       for (var i = 0; i < comuni.length; i++) {
+                            s += '<option value="' + comuni[i].value + '">' + comuni[i].text+ '</option>';
                         }
                         $("#SelectedComune_nascita").html(s);
 

@@ -58,13 +58,14 @@ namespace Userbox.Models
         public string Id { get; set; }
         public string Tipo { get; set; }
 
-        [Required]
+
+        [Required(ErrorMessage = "Nome obbligatorio")]
         [Display(Name = "Nome")]
         public string Nome { get; set; }
 
 
 
-        [Required]
+        [Required(ErrorMessage = "Cognome obbligatorio")]
         [Display(Name = "Cognome")]
         public string Cognome { get; set; }
 
@@ -76,7 +77,7 @@ namespace Userbox.Models
         public string Cod_fiscale { get; set; }
 
 
-        [Required]
+        [Required(ErrorMessage = "Nazione obbligatoria")]
         [Display(Name = "Nazione di Nascita")]
         public string SelectedNazione_nascita { get; set; }
 
@@ -109,24 +110,28 @@ namespace Userbox.Models
 
 
 
-        [Required]
+        [Required(ErrorMessage = "Data di nascita obbligatoria")]
         [Display(Name = "Data di nascita")]
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime? Data_nascita { get; set; }
 
 
-        [Required]
+        [Required(ErrorMessage = "Mail obbligatoria")]
         [Display(Name = "Mail")]
         [DataType(DataType.EmailAddress)]
         public string Mail { get; set; }
 
 
-        [Required]
+        [Required(ErrorMessage = "Mail esterna obbligatoria")]
         [Display(Name = "Mail Esterna")]
         [DataType(DataType.EmailAddress)]
         public string Mail_esterna { get; set; }
 
+
+        
+
+        [Required(ErrorMessage = "Data di fine validità obbligatoria")]
         [Display(Name = "Data di fine validità")]
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
@@ -137,8 +142,24 @@ namespace Userbox.Models
 
     }
 
+    public class JsonOspite
+    {
 
-    
+        public string nome;
+        public string cognome;
+        public string codice_fiscale;
+        public DateTime data_nascita;
+        public string nazione_nascita;
+        public string nazione_nascita_cod;
+        public string comune_nascita;
+        public string comune_nascita_cod;
+        public string mail;
+        public string mail_esterna;
+        public DateTime data_inizio;
+        public DateTime data_fine;
+
+    }
+
 
 
 
