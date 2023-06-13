@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Userbox.Models;
+using Userbox.Models.Ldap;
 
 namespace Userbox.Controllers
 {
@@ -91,6 +92,7 @@ namespace Userbox.Controllers
 
                     if (!ModelState.IsValid)
                     {
+                        ConfigureViewModel(model);
                         return View(model);
                     }
                     else 
@@ -115,7 +117,37 @@ namespace Userbox.Controllers
                             comune_nascita = comune.Trim().ToUpper(),
                             data_fine = model.Data_fine.Value
                         };
-                        messaggio = wsc.PostAnagraficaOspite(jo);
+                        string ris = wsc.PostAnagraficaOspite(new JsonOspite { nome = "mario", cognome = "rossi", codice_fiscale = "abc" });
+                        if (ris == "OK")
+                        {
+                            /* procedo con la chiamata a LDAP*/
+                             ris = wsc.PostAnagraficaOspiteLDAP(
+                                 new UnipiADEntry {  
+                                     givenName="ANNA",
+                                     displayName="CIPO",
+                                    
+                                     sn="A",
+                                     uid="a.test123"
+                                 });
+
+                            if (ris == "OK")
+                                ViewBag.messaggio = "Utente creato con successo";
+                            else
+                            {
+                                ModelState.AddModelError("CustomError", "Errore durante la creazione su LDAP");
+                                ConfigureViewModel(model);
+                            }
+
+                        }
+                        else
+                        {
+                            /* mostro messaggio di errore*/
+                            ModelState.AddModelError("CustomError", ris);
+                            ConfigureViewModel(model);
+
+
+
+                        }
 
 
                         return View("index");

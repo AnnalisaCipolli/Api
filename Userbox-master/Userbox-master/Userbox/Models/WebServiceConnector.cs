@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
+using System.Net.Http.Headers;
 using System.Text;
 
 namespace Userbox.Models
@@ -41,19 +42,20 @@ namespace Userbox.Models
         }
 
 
-        public static string postRequester(string url, string method, string token, string urlParam, bool usePut = false)
+        public static string postRequesterOLD(string url, string method, string token, string urlParam, bool usePut = false)
         {
             string content = "", endpoint;
 
             endpoint = url + method;
 
-            endpoint = "http://localhost:61106/apiuserbox/utenteospite";
+            endpoint = "http://localhost:61106/apiuserbox/utenteospite/";
             
             //if (urlParam != null)
             //    endpoint += "/" + urlParam;
             var client = new WebClient();
             client.Headers.Set("Authorization", "Bearer " + token);
             client.Headers.Set("Accept", "application/json");
+            client.Headers.Set("Content-Type", "application/json");
             client.Encoding = Encoding.UTF8;
             ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
             try
@@ -64,18 +66,51 @@ namespace Userbox.Models
                 }
                 else
                 {
+
                     content = client.UploadString(endpoint, "POST", urlParam);
                 }
 
             }
-            catch
+            catch(Exception ex)
             {
             }
             return content;
         }
 
+        public static string postRequester(string url, string method, string token, string urlParam, bool usePut = false)
+        {
+            string content = "", endpoint;
 
-      
+            endpoint = url + method;
+
+            endpoint = "http://localhost:61106/apiuserbox/utenteospite/";
+
+
+            StringContent sc = new StringContent(urlParam,
+                Encoding.UTF8,
+                "application/json");
+
+            HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders
+                  .Accept
+                  .Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            
+
+            var res = client.PostAsync(endpoint,sc);
+            try
+            {
+                res.Result.EnsureSuccessStatusCode();
+            }
+            catch (Exception e)
+            {
+                return "Errore";
+            }
+
+            return res.Result.Content.ReadAsStringAsync().Result.ToString();
+        }
+
+
 
     }
 }

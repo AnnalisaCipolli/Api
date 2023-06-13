@@ -25,6 +25,7 @@ namespace Userbox.Controllers
         {
             WebServiceCall  wsc = new WebServiceCall(_config);
             APIAnagraficaCarriera ac = wsc.GetAnagraficaIDMByCF(_utenteauth.CodFiscale);
+
             return View(ac);
         }
 

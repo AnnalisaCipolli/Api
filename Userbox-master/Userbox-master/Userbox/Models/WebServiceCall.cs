@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
 using System.Text;
+using Userbox.Models.Ldap;
 
 namespace Userbox.Models
 {
@@ -68,11 +69,37 @@ namespace Userbox.Models
         {
             string ris = "";
             string json = JsonConvert.SerializeObject(jo);
+    
             ris = WebServiceConnector.postRequester(_config["WebService:url_API_IDM"], _config["WebService:method_API_IDM_PostOspite"], _config["WebService:token_API_IDM"] ,json, false);
 
             
             return ris;
         }
+
+
+        public string GetAnagraficaLdap(string cod_fiscale)
+        {
+            string ris = "";
+           
+            ris = WebServiceConnector.getRequester(_config["WebService:url_LDAP"], _config["WebService:token_LDAP"], _config["WebService:method_LDAP_searchcf"]+"/"+ cod_fiscale, null);
+
+
+            return ris;
+        }
+
+        public string PostAnagraficaOspiteLDAP(UnipiADEntry jo)
+        {
+            string ris = "";
+            string json = JsonConvert.SerializeObject(jo);
+
+            ris = WebServiceConnector.postRequester(_config["WebService:url_LDAP"], _config["WebService:method_LDAP_add"], _config["WebService:token_LDAP"], json, false);
+
+
+            return ris;
+        }
+
+
+
 
         public List<JsonNazione> GetListaNazioniIDM()
         {
