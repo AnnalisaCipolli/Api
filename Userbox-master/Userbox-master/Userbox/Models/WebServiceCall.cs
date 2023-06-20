@@ -87,12 +87,23 @@ namespace Userbox.Models
             return ris;
         }
 
-        public string PostAnagraficaOspiteLDAP(UnipiADEntry jo)
+        public string PostAnagraficaOspiteLDAP(UnipiEntry jo)
         {
             string ris = "";
             string json = JsonConvert.SerializeObject(jo);
 
             ris = WebServiceConnector.postRequester(_config["WebService:url_LDAP"], _config["WebService:method_LDAP_add"], _config["WebService:token_LDAP"], json, false);
+
+
+            return ris;
+        }
+
+        public string PostAnagraficaOspiteAD(UnipiADEntry jo)
+        {
+            string ris = "";
+            string json = JsonConvert.SerializeObject(jo);
+
+            ris = WebServiceConnector.postRequester(_config["WebService:url_LDAP"], _config["WebService:method_AD_add"], _config["WebService:token_LDAP"], json, false);
 
 
             return ris;

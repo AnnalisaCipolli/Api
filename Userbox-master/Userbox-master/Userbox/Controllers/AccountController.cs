@@ -21,6 +21,7 @@ namespace Userbox.Controllers
 
         // GET: AccountController
         [Authorize]
+
         public ActionResult Index()
         {
             return View();

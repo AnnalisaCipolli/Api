@@ -2,21 +2,24 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Userbox.Models;
+using Userbox.Models.Auth;
 using Userbox.Models.Ldap;
 
 namespace Userbox.Controllers
 {
 
-
+   
     public class OspiteController : Controller
     {
 
+        private readonly UtenteAuth _utenteAuth;
         private readonly ConfigurationManager _config;
         WebServiceCall wsc;
 
 
-        public OspiteController(ConfigurationManager config)
+        public OspiteController(UtenteAuth utenteauth, ConfigurationManager config)
         {
+            _utenteAuth = utenteauth;
             _config = config;
             wsc = new WebServiceCall(_config);
 
@@ -48,7 +51,13 @@ namespace Userbox.Controllers
         //[CustomAuth(role = "Amministratore", capabilities = "CreazioneAccountOspite", condizioni_or = true)]
         public ActionResult Create()
         {
-          
+            if (!_utenteAuth.Capability.Any(x=> x == "AmministratoreUserbox"))
+            {
+                ModelState.AddModelError("CustomError", "Utente non autorizato");
+                return View(null);
+            }
+                
+
             /* nuovo metodo*/
             ViewOspite model = new ViewOspite();
             model.Data_fine = null;
@@ -62,10 +71,10 @@ namespace Userbox.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(ViewOspite model)
-        { 
+        {
+            string ris = "";
             try
             {
-                string messaggio = "";
                 APIAnagraficaCarriera psupporto = wsc.GetAnagraficaIDMByCF(model.Cod_fiscale);
 
 
@@ -117,21 +126,39 @@ namespace Userbox.Controllers
                             comune_nascita = comune.Trim().ToUpper(),
                             data_fine = model.Data_fine.Value
                         };
-                        string ris = wsc.PostAnagraficaOspite(new JsonOspite { nome = "mario", cognome = "rossi", codice_fiscale = "abc" });
-                        if (ris == "OK")
+
+
+
+                         ris = wsc.PostAnagraficaOspite(new JsonOspite { nome = "mario", cognome = "rossi", codice_fiscale = "abc" });
+                        if (ris == "200")
                         {
                             /* procedo con la chiamata a LDAP*/
                              ris = wsc.PostAnagraficaOspiteLDAP(
-                                 new UnipiADEntry {  
-                                     givenName="ANNA",
-                                     displayName="CIPO",
-                                    
-                                     sn="A",
-                                     uid="a.test123"
-                                 });
+                                 new UnipiEntry {   
+                                     uid= "",
+                                     sn= model.Cognome.Trim().ToUpper(),
+                                     givenName= model.Nome.Trim().ToUpper(),
+                                     unipiCodiceFiscale = model.Cod_fiscale.Trim().ToUpper(),
+                                     mail= model.Mail_esterna.Trim().ToUpper(),
+                                     unipiExtMail = model.Mail_esterna.Trim().ToUpper(),
+                                     mobile= model.Telefono.Trim(),
+                                     unipiProvisioningSource= UnipiEntry.ProvisioningSource.self
+                                });
 
                             if (ris == "OK")
-                                ViewBag.messaggio = "Utente creato con successo";
+                            {
+                                ris = wsc.PostAnagraficaOspiteAD(
+                                new UnipiADEntry
+                                {
+                                    uid = "",
+                                    sn = model.Cognome.Trim().ToUpper(),
+                                    givenName = model.Nome.Trim().ToUpper(),
+                                   displayName = ""
+                                });
+                            }
+                                
+                            
+                            ViewBag.messaggio = "Utente creato con successo";
                             else
                             {
                                 ModelState.AddModelError("CustomError", "Errore durante la creazione su LDAP");

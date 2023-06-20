@@ -20,7 +20,8 @@ namespace Userbox.Models
 
         public UtenteAuth Valorizza(List<System.Security.Claims.Claim> lista, ConfigurationManager _config)
         {
-
+            WebServiceCall wsc = new WebServiceCall(_config);
+            
             this.Sub = lista.Where(x => x.Type == "sub").First().Value;
             this.Principal = lista.Where(x => x.Type == "principal").First().Value;
             this.Nome = lista.Where(x => x.Type == "given_name").First().Value;
@@ -30,11 +31,13 @@ namespace Userbox.Models
             this.UnipiUserID = lista.Where(x => x.Type == "UnipiUserID").First().Value;
             this.AuthType = lista.Where(x => x.Type == "tenant").First().Value;
             /* vediamo le capability da IDM*/
-            WebServiceCall wsc = new WebServiceCall(_config);
             this.Capability = new List<string>();
             this.Capability = wsc.GetCapabilityIDMByCF(this.CodFiscale);
             /*TEST */
-            this.Capability.Add("AmministratoreUserbox");
+            /* se sono personale tecnico amministrativo ho questo ruolo*/
+            APIAnagraficaCarriera ac = wsc.GetAnagraficaIDMByCF(this.CodFiscale);
+            if (ac.Personale!=null && ac.Personale.RuoliPersonale.Any(x=> x.InquadramentoCod=="ND"))
+                this.Capability.Add("AmministratoreUserbox");
 
 
            

@@ -116,6 +116,12 @@ namespace Userbox.Models
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime? Data_nascita { get; set; }
 
+        [Required(ErrorMessage = "Telefono cellulare obbligatoria")]
+        [Display(Name = "Telefono cellulare")]
+        [DataType(DataType.PhoneNumber)]
+
+        public string Telefono { get; set; }
+
 
         [Required(ErrorMessage = "Mail obbligatoria")]
         [Display(Name = "Mail")]
