@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{81A613A8-9390-4E9A-AE2E-513605D97294}|api.csproj|c:\\users\\annalisa\\documents\\visual studio 2022\\projects\\api\\models\\jsonresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81A613A8-9390-4E9A-AE2E-513605D97294}|api.csproj|solutionrelative:models\\jsonresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81A613A8-9390-4E9A-AE2E-513605D97294}|api.csproj|c:\\users\\annalisa\\documents\\visual studio 2022\\projects\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{81A613A8-9390-4E9A-AE2E-513605D97294}|api.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{81A613A8-9390-4E9A-AE2E-513605D97294}|api.csproj|c:\\users\\annalisa\\documents\\visual studio 2022\\projects\\api\\controllers\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81A613A8-9390-4E9A-AE2E-513605D97294}|api.csproj|solutionrelative:controllers\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -142,11 +150,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "JsonResult.cs",
+              "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Models\\JsonResult.cs",
+              "RelativeDocumentMoniker": "Models\\JsonResult.cs",
+              "ToolTip": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Models\\JsonResult.cs",
+              "RelativeToolTip": "Models\\JsonResult.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T10:28:50.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAuwCMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-24T10:27:10.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "apiController.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Controllers\\apiController.cs",
               "RelativeDocumentMoniker": "Controllers\\apiController.cs",
@@ -159,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Resource.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Resources\\Resource.Designer.cs",
               "RelativeDocumentMoniker": "Resources\\Resource.Designer.cs",
@@ -172,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Resource.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Resources\\Resource.cs",
               "RelativeDocumentMoniker": "Resources\\Resource.cs",
@@ -185,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "CustomLocalizer.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Models\\CustomLocalizer.cs",
               "RelativeDocumentMoniker": "Models\\CustomLocalizer.cs",
@@ -198,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Views\\Shared\\Components\\Footer\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\Footer\\Default.cshtml",
@@ -211,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Resource.resx",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Resources\\Resource.resx",
               "RelativeDocumentMoniker": "Resources\\Resource.resx",
@@ -223,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -236,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -249,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
@@ -262,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -275,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "BaseController.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Controllers\\BaseController.cs",
               "RelativeDocumentMoniker": "Controllers\\BaseController.cs",
@@ -288,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
@@ -301,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Views\\Shared\\Components\\MenuNotification\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\MenuNotification\\Default.cshtml",
@@ -314,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "UnipiHeaderViewComponent.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\ViewComponents\\UnipiHeaderViewComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\UnipiHeaderViewComponent.cs",
@@ -327,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "WebServiceCall.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Models\\WebServiceCall.cs",
               "RelativeDocumentMoniker": "Models\\WebServiceCall.cs",
@@ -340,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "PageHeaderViewComponent.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\ViewComponents\\PageHeaderViewComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\PageHeaderViewComponent.cs",
@@ -353,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "PageAlertViewComponent.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\ViewComponents\\PageAlertViewComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\PageAlertViewComponent.cs",
@@ -366,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "MenuUserViewComponent.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\ViewComponents\\MenuUserViewComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\MenuUserViewComponent.cs",
@@ -379,7 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "SidebarViewComponent.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\ViewComponents\\SidebarViewComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\SidebarViewComponent.cs",
@@ -392,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "MenuTaskViewComponent.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\ViewComponents\\MenuTaskViewComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\MenuTaskViewComponent.cs",
@@ -405,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "MenuNotificationViewComponent.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\ViewComponents\\MenuNotificationViewComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\MenuNotificationViewComponent.cs",
@@ -418,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "MenuMessageViewComponent.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\ViewComponents\\MenuMessageViewComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\MenuMessageViewComponent.cs",
@@ -431,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "MenuCreator.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\ViewComponents\\MenuCreator.cs",
               "RelativeDocumentMoniker": "ViewComponents\\MenuCreator.cs",
@@ -444,7 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "HeaderViewComponent.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\ViewComponents\\HeaderViewComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\HeaderViewComponent.cs",
@@ -457,7 +495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "FooterViewComponent.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\ViewComponents\\FooterViewComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\FooterViewComponent.cs",
@@ -470,7 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "DepartmentViewComponent.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\ViewComponents\\DepartmentViewComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\DepartmentViewComponent.cs",
@@ -483,7 +521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "ControlSidebarViewComponent.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\ViewComponents\\ControlSidebarViewComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\ControlSidebarViewComponent.cs",
@@ -496,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Views\\Shared\\Components\\Breadcrumb\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\Breadcrumb\\Default.cshtml",
@@ -509,7 +547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "WebServiceConnector.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Models\\WebServiceConnector.cs",
               "RelativeDocumentMoniker": "Models\\WebServiceConnector.cs",
@@ -522,7 +560,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "Message.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Models\\Message.cs",
               "RelativeDocumentMoniker": "Models\\Message.cs",
@@ -535,7 +573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "BreadcrumbViewComponent.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\ViewComponents\\BreadcrumbViewComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\BreadcrumbViewComponent.cs",
@@ -548,7 +586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "SidebarMenu.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Models\\SidebarMenu.cs",
               "RelativeDocumentMoniker": "Models\\SidebarMenu.cs",
@@ -561,7 +599,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "AppSettings.cs",
               "DocumentMoniker": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Models\\AppSettings.cs",
               "RelativeDocumentMoniker": "Models\\AppSettings.cs",
