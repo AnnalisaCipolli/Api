@@ -1,21 +1,27 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using api.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
 namespace api.Controllers
 {
-    public class apiController : Controller
+    public class apiController : ApiController
     {
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.Route("api/index")]
-        public async Task<IActionResult> Index()
+        private readonly ConfigurationManager _config;
+        WebServiceCall wsc;
+
+
+        public apiController( ConfigurationManager config)
         {
+            _config = config;
+            wsc = new WebServiceCall(_config);
 
 
-            return Json("Connessione avvenuta con successo");
         }
 
+
+       
         #region utenti in generale
 
 
@@ -25,25 +31,21 @@ namespace api.Controllers
 
 
         [System.Web.Http.HttpGet]
-        [System.Web.Http.Route("api/anagrafica/id/{id}")]
-        public async Task<IActionResult> AnagraficaID(string id)
+
+        [System.Web.Http.Route("api/GetMUD/{id}")]
+        public async Task<ActionResult<RootExport>> GetMUD(string id)
         {
             try
             {
-                //Persona p = PersonaModel.find(id.ToUpper());
+                Root p = wsc.GetMUD(id);
 
+                if (p != null)
+                    return utility.GetMUD(p);
+                else
+                    return null;
 
-                //if (p != null)
-                //{
-
-                //    return Json(utility.GetAPIAnagrafica(p));
-
-                //}
-                //else
-                //{
-                    return NotFound();
-                //}
-
+                 //   return NotFound();
+                
             }
             catch (Exception ex)
             {

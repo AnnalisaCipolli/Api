@@ -15,8 +15,53 @@ namespace api.Models
             
             _config = conf;
         }
-        
-        
+
+
+        public Root GetMUD(string cod_fiscale)
+        {
+            string ris = "";
+            Root r = new Root();
+
+            ris = WebServiceConnector.getRequester(_config["WebService:url"], _config["WebService:token"], _config["WebService:method_MUD"] + cod_fiscale, null);
+
+            if (ris != "")
+            {
+                r = JsonConvert.DeserializeObject<Root>(ris);
+            }
+
+            return r;
+        }
+
+        //public APIAnagraficaCarriera GetAnagraficaIDMByCF(string cod_fiscale)
+        //{
+        //    string ris = "";
+        //    APIAnagraficaCarriera r = new APIAnagraficaCarriera();
+
+        //    ris = WebServiceConnector.getRequester(_config["WebService:url_ws02_API_IDM"], _config["WebService:token_ws02_API_IDM"], _config["WebService:method_ws02_API_IDM_Anagrafica_cf"] + cod_fiscale,null);
+
+        //    if (ris != "")
+        //    {
+        //        r = JsonConvert.DeserializeObject<APIAnagraficaCarriera>(ris);
+        //     }
+
+        //    return r;
+        //}
+
+
+        //public APIAnagraficaCarriera GetAnagraficaIDMByCF(string cod_fiscale)
+        //{
+        //    string ris = "";
+        //    APIAnagraficaCarriera r = new APIAnagraficaCarriera();
+
+        //    ris = WebServiceConnector.getRequester(_config["WebService:url_ws02_API_IDM"], _config["WebService:token_ws02_API_IDM"], _config["WebService:method_ws02_API_IDM_Anagrafica_cf"] + cod_fiscale,null);
+
+        //    if (ris != "")
+        //    {
+        //        r = JsonConvert.DeserializeObject<APIAnagraficaCarriera>(ris);
+        //     }
+
+        //    return r;
+        //}
 
         //public APIAnagraficaCarriera GetAnagraficaIDMByCF(string cod_fiscale)
         //{
@@ -69,10 +114,10 @@ namespace api.Models
         //{
         //    string ris = "";
         //    string json = JsonConvert.SerializeObject(jo);
-    
+
         //    ris = WebServiceConnector.postRequester(_config["WebService:url_API_IDM"], _config["WebService:method_API_IDM_PostOspite"], _config["WebService:token_API_IDM"] ,json, false);
 
-            
+
         //    return ris;
         //}
 
@@ -80,7 +125,7 @@ namespace api.Models
         //public string GetAnagraficaLdap(string cod_fiscale)
         //{
         //    string ris = "";
-           
+
         //    ris = WebServiceConnector.getRequester(_config["WebService:url_LDAP"], _config["WebService:token_LDAP"], _config["WebService:method_LDAP_searchcf"]+"/"+ cod_fiscale, null);
 
 
