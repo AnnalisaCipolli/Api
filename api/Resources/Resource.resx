@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="AltTitleDelete" xml:space="preserve">
+    <value>Cancella record</value>
+  </data>
+	<data name="AltTitleDetails" xml:space="preserve">
+    <value>Vedi dettagli record</value>
+  </data>
+	<data name="MenuMain_Ospiti"  xml:space="preserve">
+    <value>Ospiti</value>
+  </data>
+
+	<data name="MenuMain_Ospiti_Crea"  xml:space="preserve">
+    <value>Crea</value>
+  </data>
+	<data name="MenuMain_Ospiti_Visualizza"  xml:space="preserve">
+    <value>Lista</value>
+  </data>
+	<data name="AltTitleEdit" xml:space="preserve">
+    <value>Modifica record</value>
+  </data>
+	<data name="AltTitleIdentityDetails" xml:space="preserve">
+    <value>Vedi dettagli da Identity</value>
+  </data>
+	<data name="AltTitleLdapDetails" xml:space="preserve">
+    <value>Vedi dettagli da Ldap</value>
+  </data>
+	<data name="BtnActivate" xml:space="preserve">
+    <value>Attiva</value>
+  </data>
+	<data name="BtnActivateSign" xml:space="preserve">
+    <value>Attiva firma</value>
+  </data>
+	<data name="BtnBackToSearch" xml:space="preserve">
+    <value>Torna alla Ricerca</value>
+  </data>
+	<data name="BtnCreate" xml:space="preserve">
+    <value>Inserisci</value>
+    <comment>Pulsante inserisci nuovo elemento</comment>
+  </data>
+	<data name="BtnDeactivate" xml:space="preserve">
+    <value>Disattiva</value>
+    <comment>Pulsante inserisci nuovo elemento</comment>
+  </data>
+	<data name="BtnDetails" xml:space="preserve">
+    <value>Dettagli</value>
+  </data>
+	<data name="BtnEdit" xml:space="preserve">
+    <value>Modifica</value>
+    <comment>Pulsante salva dati</comment>
+  </data>
+	<data name="BtnEditPhone" xml:space="preserve">
+    <value>Modifica cellulare</value>
+  </data>
+	<data name="BtnImpersonate" xml:space="preserve">
+    <value>Impersona</value>
+    <comment>Pulsante usa applicazione come altro utente</comment>
+  </data>
+	<data name="BtnList" xml:space="preserve">
+    <value>Elenco</value>
+    <comment>Pulsante torna all'elenco</comment>
+  </data>
+	<data name="BtnLogoff" xml:space="preserve">
+    <value>Esci</value>
+    <comment>Pulsante Esci</comment>
+  </data>
+	<data name="BtnLogout" xml:space="preserve">
+    <value>Logout</value>
+    <comment>Pulsante Logout</comment>
+  </data>
+	<data name="BtnNew" xml:space="preserve">
+    <value>Nuovo</value>
+    <comment>Pulsante inserisci nuovo elemento</comment>
+  </data>
+	<data name="BtnPause" xml:space="preserve">
+    <value>Sospendi</value>
+  </data>
+	<data name="BtnReActivate" xml:space="preserve">
+    <value>Riattiva</value>
+  </data>
+	<data name="BtnResetUser" xml:space="preserve">
+    <value>Reset utente</value>
+  </data>
+	<data name="BtnRoles" xml:space="preserve">
+    <value>Gestisci ruoli</value>
+  </data>
+	<data name="BtnSave" xml:space="preserve">
+    <value>Salva</value>
+    <comment>Pulsante salva dati</comment>
+  </data>
+	<data name="BtnSaveAs_Excel" xml:space="preserve">
+    <value>Esporta</value>
+    <comment>Pulsante esporta in Excel</comment>
+  </data>
+	<data name="BtnSaveAs_Pdf" xml:space="preserve">
+    <value>Stampa</value>
+    <comment>Pulsante esporta in Pdf</comment>
+  </data>
+	<data name="BtnSearch" xml:space="preserve">
+    <value>Ricerca</value>
+  </data>
+	<data name="BtnShare" xml:space="preserve">
+    <value>Condividi</value>
+    <comment>Pulsante salva dati</comment>
+  </data>
+	<data name="BtnStop" xml:space="preserve">
+    <value>Revoca</value>
+  </data>
+	<data name="BtnStopFromPause" xml:space="preserve">
+    <value>Revoca da sospeso</value>
+  </data>
+	<data name="BtnUpload_File" xml:space="preserve">
+    <value>Carica file</value>
+    <comment>Pulsante carica fil</comment>
+  </data>
+	<data name="C" xml:space="preserve">
+    <value>Country</value>
+  </data>
+	<data name="CN" xml:space="preserve">
+    <value>Nome completo</value>
+  </data>
+	<data name="dnQualifier" xml:space="preserve">
+    <value>dnQualifier</value>
+  </data>
+	<data name="E" xml:space="preserve">
+    <value>Email</value>
+  </data>
+	<data name="ErrorRange" xml:space="preserve">
+    <value>{0} deve essere compreso tra  {1} e {2}</value>
+  </data>
+	<data name="G" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+	<data name="LblActive" xml:space="preserve">
+    <value>Attivo</value>
+  </data>
+	<data name="LblAddress" xml:space="preserve">
+    <value>Indirizzo</value>
+  </data>
+	<data name="LblCreationDate" xml:space="preserve">
+    <value>Data inserimento</value>
+  </data>
+	<data name="LblDescr" xml:space="preserve">
+    <value>Descrizione</value>
+  </data>
+	<data name="LblLastName" xml:space="preserve">
+    <value>Cognome</value>
+  </data>
+	<data name="LblName" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+	<data name="LblSearch" xml:space="preserve">
+    <value>Ricerca</value>
+  </data>
+	<data name="LblSearchTerm" xml:space="preserve">
+    <value>Termine ricerca</value>
+  </data>
+	<data name="LblSearchType" xml:space="preserve">
+    <value>Tipo ricerca</value>
+  </data>
+	<data name="LblText" xml:space="preserve">
+    <value>Testo</value>
+  </data>
+	<data name="LblTitle" xml:space="preserve">
+    <value>Titolo</value>
+  </data>
+	<data name="LblUnipiUserName" xml:space="preserve">
+    <value>Unipi username</value>
+  </data>
+	<data name="LblUsername" xml:space="preserve">
+    <value>Username</value>
+  </data>
+	<data name="LblUtente_IdentityUsers" xml:space="preserve">
+    <value>Identity</value>
+    <comment>Menu principale, voce Utenti</comment>
+  </data>
+	<data name="LblUtente_LdapUsers" xml:space="preserve">
+    <value>Ldap</value>
+    <comment>Menu principale, voce Utenti</comment>
+  </data>
+	<data name="LblUtente_User" xml:space="preserve">
+    <value>Utente</value>
+  </data>
+	<data name="LblUtente_Users" xml:space="preserve">
+    <value>Utenti</value>
+  </data>
+	<data name="MenuMain_AutoEnrollment" xml:space="preserve">
+    <value>Autorilascio firma elettronica</value>
+  </data>
+	<data name="MenuMain_Configuration" xml:space="preserve">
+    <value>Configurazioni</value>
+  </data>
+	<data name="MenuMain_Home" xml:space="preserve">
+    <value>Home</value>
+    <comment>Menu principale, voce Home</comment>
+  </data>
+	<data name="MenuMain_Logs" xml:space="preserve">
+    <value>Logs</value>
+    <comment>Menu principale, voce Utenti</comment>
+  </data>
+	<data name="MenuMain_TermsConditions" xml:space="preserve">
+    <value>Termini e condizioni</value>
+  </data>
+	<data name="MenuMain_Users" xml:space="preserve">
+    <value>Utenti</value>
+    <comment>Menu principale, voce Utenti</comment>
+  </data>
+	<data name="MenuTop_Logout" xml:space="preserve">
+    <value>Logout</value>
+    <comment>Link a Account.SignOut</comment>
+  </data>
+	<data name="Msg_ChangeRecord" xml:space="preserve">
+    <value>Confermi di voler modificare questo record?</value>
+  </data>
+	<data name="Select2Msg_SelectItem" xml:space="preserve">
+    <value>Seleziona un</value>
+  </data>
+	<data name="SERIALNUMBER" xml:space="preserve">
+    <value>Codice fiscale</value>
+  </data>
+	<data name="SN" xml:space="preserve">
+    <value>Cognome</value>
+  </data>
+	<data name="TltCreate" xml:space="preserve">
+    <value>Inserisci</value>
+    <comment>Header principale pagina di inserimento</comment>
+  </data>
+	<data name="TltDelete" xml:space="preserve">
+    <value>Cancella</value>
+    <comment>Header principale pagina dicancellazione</comment>
+  </data>
+	<data name="TltDetail" xml:space="preserve">
+    <value>Dettaglio</value>
+    <comment>Header principale pagina dettaglio</comment>
+  </data>
+	<data name="TltDetails" xml:space="preserve">
+    <value>Dettagli</value>
+    <comment>Header principale pagina dettaglio</comment>
+  </data>
+	<data name="TltEdit" xml:space="preserve">
+    <value>Modifica</value>
+    <comment>Header principale pagina di modifica</comment>
+  </data>
+	<data name="TltList" xml:space="preserve">
+    <value>Elenco</value>
+    <comment>Header principale pagina elenco</comment>
+  </data>
+	<data name="ValidFrom" xml:space="preserve">
+    <value>Valido dal</value>
+  </data>
+	<data name="ValidTo" xml:space="preserve">
+    <value>Valido fino al</value>
+  </data>
+</root>
