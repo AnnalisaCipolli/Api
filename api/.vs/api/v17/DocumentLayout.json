@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{81A613A8-9390-4E9A-AE2E-513605D97294}|api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81A613A8-9390-4E9A-AE2E-513605D97294}|api.csproj|c:\\users\\annalisa\\documents\\visual studio 2022\\projects\\api\\resources\\resource.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "AbsoluteMoniker": "D:0:0:{81A613A8-9390-4E9A-AE2E-513605D97294}|api.csproj|C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\resources\\resource.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
       "RelativeMoniker": "D:0:0:{81A613A8-9390-4E9A-AE2E-513605D97294}|api.csproj|solutionrelative:resources\\resource.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     },
     {
@@ -150,12 +150,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -164,7 +160,7 @@
               "RelativeDocumentMoniker": "Models\\JsonResult.cs",
               "ToolTip": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Models\\JsonResult.cs",
               "RelativeToolTip": "Models\\JsonResult.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAYAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAwwBoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-24T10:28:50.323Z",
               "EditorCaption": ""
@@ -179,8 +175,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAA4AAAAAAAAAAAAuwCMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-24T10:27:10.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T10:27:10.39Z"
             },
             {
               "$type": "Document",
@@ -192,8 +187,7 @@
               "RelativeToolTip": "Controllers\\apiController.cs",
               "ViewState": "AQIAACUAAAAAAAAAAAAAADkAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T10:08:34.019Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T10:08:34.019Z"
             },
             {
               "$type": "Document",
@@ -205,8 +199,7 @@
               "RelativeToolTip": "Resources\\Resource.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T10:06:02.177Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T10:06:02.177Z"
             },
             {
               "$type": "Document",
@@ -218,8 +211,7 @@
               "RelativeToolTip": "Resources\\Resource.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T10:05:54.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T10:05:54.5Z"
             },
             {
               "$type": "Document",
@@ -231,8 +223,7 @@
               "RelativeToolTip": "Models\\CustomLocalizer.cs",
               "ViewState": "AQIAACEAAAAAAAAAAADwvyUAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T10:04:51.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T10:04:51.968Z"
             },
             {
               "$type": "Document",
@@ -244,8 +235,7 @@
               "RelativeToolTip": "Views\\Shared\\Components\\Footer\\Default.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T09:32:10.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:32:10.401Z"
             },
             {
               "$type": "Document",
@@ -256,8 +246,7 @@
               "ToolTip": "C:\\Users\\Annalisa\\Documents\\Visual Studio 2022\\Projects\\api\\Resources\\Resource.resx",
               "RelativeToolTip": "Resources\\Resource.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-07-24T10:06:09.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T10:06:09.786Z"
             },
             {
               "$type": "Document",
@@ -269,8 +258,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAADQAAAAAAAAAAAAAAD4AAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:10:06.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:10:06.332Z"
             },
             {
               "$type": "Document",
@@ -282,8 +270,7 @@
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T09:59:40.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:59:40.127Z"
             },
             {
               "$type": "Document",
@@ -295,8 +282,7 @@
               "RelativeToolTip": "Views\\Shared\\Error.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T09:28:32.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:28:32.975Z"
             },
             {
               "$type": "Document",
@@ -308,8 +294,7 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAmwBcAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:42:05.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:42:05.492Z"
             },
             {
               "$type": "Document",
@@ -321,8 +306,7 @@
               "RelativeToolTip": "Controllers\\BaseController.cs",
               "ViewState": "AQIAACkAAAAAAAAAAAAuwD0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:43:13.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:43:13.771Z"
             },
             {
               "$type": "Document",
@@ -334,8 +318,7 @@
               "RelativeToolTip": "Models\\ErrorViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:28:49.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:28:49.372Z"
             },
             {
               "$type": "Document",
@@ -347,8 +330,7 @@
               "RelativeToolTip": "Views\\Shared\\Components\\MenuNotification\\Default.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T09:27:22.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:27:22.8Z"
             },
             {
               "$type": "Document",
@@ -360,8 +342,7 @@
               "RelativeToolTip": "ViewComponents\\UnipiHeaderViewComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:26:32.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:26:32.688Z"
             },
             {
               "$type": "Document",
@@ -373,8 +354,7 @@
               "RelativeToolTip": "Models\\WebServiceCall.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAMwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:23:07.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:23:07.314Z"
             },
             {
               "$type": "Document",
@@ -386,8 +366,7 @@
               "RelativeToolTip": "ViewComponents\\PageHeaderViewComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:26:24.561Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:26:24.561Z"
             },
             {
               "$type": "Document",
@@ -399,8 +378,7 @@
               "RelativeToolTip": "ViewComponents\\PageAlertViewComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:26:18.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:26:18.134Z"
             },
             {
               "$type": "Document",
@@ -412,8 +390,7 @@
               "RelativeToolTip": "ViewComponents\\MenuUserViewComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:26:09.904Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:26:09.904Z"
             },
             {
               "$type": "Document",
@@ -425,8 +402,7 @@
               "RelativeToolTip": "ViewComponents\\SidebarViewComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:19:39.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:19:39.113Z"
             },
             {
               "$type": "Document",
@@ -438,8 +414,7 @@
               "RelativeToolTip": "ViewComponents\\MenuTaskViewComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:26:01.486Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:26:01.486Z"
             },
             {
               "$type": "Document",
@@ -451,8 +426,7 @@
               "RelativeToolTip": "ViewComponents\\MenuNotificationViewComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:25:43.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:25:43.493Z"
             },
             {
               "$type": "Document",
@@ -464,8 +438,7 @@
               "RelativeToolTip": "ViewComponents\\MenuMessageViewComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:25:35.28Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:25:35.28Z"
             },
             {
               "$type": "Document",
@@ -477,8 +450,7 @@
               "RelativeToolTip": "ViewComponents\\MenuCreator.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:25:22.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:25:22.4Z"
             },
             {
               "$type": "Document",
@@ -490,8 +462,7 @@
               "RelativeToolTip": "ViewComponents\\HeaderViewComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:25:18.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:25:18.429Z"
             },
             {
               "$type": "Document",
@@ -503,8 +474,7 @@
               "RelativeToolTip": "ViewComponents\\FooterViewComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:25:13.899Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:25:13.899Z"
             },
             {
               "$type": "Document",
@@ -516,8 +486,7 @@
               "RelativeToolTip": "ViewComponents\\DepartmentViewComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:25:09.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:25:09.792Z"
             },
             {
               "$type": "Document",
@@ -529,8 +498,7 @@
               "RelativeToolTip": "ViewComponents\\ControlSidebarViewComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:25:04.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:25:04.275Z"
             },
             {
               "$type": "Document",
@@ -542,8 +510,7 @@
               "RelativeToolTip": "Views\\Shared\\Components\\Breadcrumb\\Default.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T09:24:44.133Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:24:44.133Z"
             },
             {
               "$type": "Document",
@@ -555,8 +522,7 @@
               "RelativeToolTip": "Models\\WebServiceConnector.cs",
               "ViewState": "AQIAAGEAAAAAAAAAAAAAAHUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:24:03.153Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:24:03.153Z"
             },
             {
               "$type": "Document",
@@ -568,8 +534,7 @@
               "RelativeToolTip": "Models\\Message.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAswBUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:22:59.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:22:59.683Z"
             },
             {
               "$type": "Document",
@@ -581,8 +546,7 @@
               "RelativeToolTip": "ViewComponents\\BreadcrumbViewComponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:22:27.564Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:22:27.564Z"
             },
             {
               "$type": "Document",
@@ -594,8 +558,7 @@
               "RelativeToolTip": "Models\\SidebarMenu.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAIwBgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:20:44.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:20:44.214Z"
             },
             {
               "$type": "Document",
@@ -607,8 +570,7 @@
               "RelativeToolTip": "Models\\AppSettings.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:15:01.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T09:15:01.771Z"
             }
           ]
         }

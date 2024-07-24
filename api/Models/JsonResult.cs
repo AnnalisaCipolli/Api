@@ -6,7 +6,7 @@
     }
 
     public class Root
-    {
+    { 
         public JsonMUD list { get; set; }
     }
 
